@@ -14,21 +14,19 @@
             <h1>Jeraldo Cruz</h1>
             <h2>Technical Operations Leader & Systems Architect</h2>
             <p>Bridging complex technical infrastructure with daily business operations. Scaling distributed teams, engineering automated workflows, and driving data-backed cost reductions across global environments.</p>
-            
-            <!-- TRACKED BUTTON -->
             <button class="track-click" id="download-resume">Download ATS Resume</button>
         </div>
     </header>
 
-    <!-- STICKY SCROLL SECTION -->
+    <!-- STICKY SCROLL-TELLING SECTION -->
     <main>
         <section class="scroll-container">
             
-            <!-- Left Side: The Stacked Visual Frames -->
+            <!-- LEFT SIDE: STICKY VISUAL STAGE -->
             <div class="visual-column">
                 <div class="sticky-visual">
                     
-                    <!-- FRAME 1: Campaign Lab (US Map with CO HQ) -->
+                    <!-- FRAME 1: CAMPAIGN LAB (US TILE GRID MAP + CO HQ) -->
                     <div class="visual-frame active" id="vis-campaignlab">
                         <div class="block-map">
                             <!-- Row 1 -->
@@ -62,7 +60,6 @@
                             <!-- Row 4 -->
                             <div class="state-block highlight" style="grid-column: 1; grid-row: 4;">CA</div>
                             <div class="state-block highlight" style="grid-column: 2; grid-row: 4;">UT</div>
-                            <!-- COLORADO HQ Highlight -->
                             <div class="state-block hq" style="grid-column: 3; grid-row: 4;">CO</div>
                             <div class="state-block highlight" style="grid-column: 4; grid-row: 4;">NE</div>
                             <div class="state-block highlight" style="grid-column: 5; grid-row: 4;">MO</div>
@@ -91,67 +88,160 @@
                             <div class="state-block highlight" style="grid-column: 9; grid-row: 7;">FL</div>
                             <div class="state-block highlight" style="grid-column: 1; grid-row: 8;">HI</div>
                         </div>
-                        <h3 class="map-caption">National Reach (HQ: Colorado)</h3>
+                        <div class="visual-label">
+                            <h3>National Reach</h3>
+                            <span>HQ: Colorado &bull; 50-State Automated Pipeline</span>
+                        </div>
                     </div>
 
-                    <!-- FRAME 2: Amuse (California Grid) -->
+                    <!-- FRAME 2: AMUSE (HUB-AND-SPOKE "WAGON WHEEL" SVG) -->
                     <div class="visual-frame" id="vis-amuse">
-                        <div class="ca-map">
-                            <!-- Staggered CA Hubs -->
-                            <div class="ca-block" style="grid-column: 2; grid-row: 1;">SAC</div>
-                            <div class="ca-block" style="grid-column: 1; grid-row: 2;">SF</div>
-                            <div class="ca-block" style="grid-column: 2; grid-row: 3;">LA</div>
-                            <div class="ca-block" style="grid-column: 3; grid-row: 4;">OC</div>
-                            <div class="ca-block" style="grid-column: 3; grid-row: 5;">SD</div>
+                        <svg class="custom-svg" viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Outer Orbit Ring -->
+                            <circle cx="180" cy="160" r="112" fill="none" stroke="#2C2C2E" stroke-width="1.5" stroke-dasharray="4 6"/>
+                            <circle cx="180" cy="160" r="68" fill="none" stroke="#222222" stroke-width="1"/>
+                            
+                            <!-- Spokes (Central Ops to 5 CA Hubs) -->
+                            <line x1="180" y1="160" x2="180" y2="48" stroke="#B8975E" stroke-width="1.5" opacity="0.7"/>
+                            <line x1="180" y1="160" x2="286" y2="125" stroke="#B8975E" stroke-width="1.5" opacity="0.7"/>
+                            <line x1="180" y1="160" x2="246" y2="250" stroke="#B8975E" stroke-width="1.5" opacity="0.7"/>
+                            <line x1="180" y1="160" x2="114" y2="250" stroke="#B8975E" stroke-width="1.5" opacity="0.7"/>
+                            <line x1="180" y1="160" x2="74" y2="125" stroke="#B8975E" stroke-width="1.5" opacity="0.7"/>
+
+                            <!-- Outer Hub Nodes -->
+                            <!-- SAC -->
+                            <circle cx="180" cy="48" r="24" fill="#111111" stroke="#B8975E" stroke-width="2"/>
+                            <text x="180" y="52" text-anchor="middle" fill="#FAFAFA" font-size="11" font-weight="600">SAC</text>
+                            <!-- SF -->
+                            <circle cx="74" cy="125" r="24" fill="#111111" stroke="#B8975E" stroke-width="2"/>
+                            <text x="74" y="129" text-anchor="middle" fill="#FAFAFA" font-size="11" font-weight="600">SF</text>
+                            <!-- LA -->
+                            <circle cx="286" cy="125" r="24" fill="#111111" stroke="#B8975E" stroke-width="2"/>
+                            <text x="286" y="129" text-anchor="middle" fill="#FAFAFA" font-size="11" font-weight="600">LA</text>
+                            <!-- OC -->
+                            <circle cx="246" cy="250" r="24" fill="#111111" stroke="#B8975E" stroke-width="2"/>
+                            <text x="246" y="254" text-anchor="middle" fill="#FAFAFA" font-size="11" font-weight="600">OC</text>
+                            <!-- SD -->
+                            <circle cx="114" cy="250" r="24" fill="#111111" stroke="#B8975E" stroke-width="2"/>
+                            <text x="114" y="254" text-anchor="middle" fill="#FAFAFA" font-size="11" font-weight="600">SD</text>
+
+                            <!-- Central Hub -->
+                            <circle cx="180" cy="160" r="40" fill="#B8975E"/>
+                            <text x="180" y="157" text-anchor="middle" fill="#111111" font-size="10" font-weight="700" letter-spacing="1">CENTRAL</text>
+                            <text x="180" y="171" text-anchor="middle" fill="#111111" font-size="10" font-weight="700" letter-spacing="1">OPS HQ</text>
+                        </svg>
+                        <div class="visual-label">
+                            <h3>Hub-and-Spoke Logistics</h3>
+                            <span>California Scaling &bull; -35% Delivery Costs</span>
                         </div>
-                        <h3 class="map-caption">Regional Hubs (California)</h3>
                     </div>
 
-                    <!-- FRAME 3: Apple (Global Nodes) -->
+                    <!-- FRAME 3: APPLE (WIREFRAME GLOBE SVG: AMR, EMEA, APAC, JPAC) -->
                     <div class="visual-frame" id="vis-apple">
-                        <div class="globe-map">
-                            <div class="globe-block">AMR</div>
-                            <div class="globe-block">EMEA</div>
-                            <div class="globe-block">APAC</div>
-                            <div class="globe-block">JPAC</div>
+                        <svg class="custom-svg" viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Wireframe Globe -->
+                            <circle cx="180" cy="160" r="115" fill="none" stroke="#333333" stroke-width="1.5"/>
+                            <ellipse cx="180" cy="160" rx="58" ry="115" fill="none" stroke="#2A2A2C" stroke-width="1"/>
+                            <ellipse cx="180" cy="160" rx="115" ry="42" fill="none" stroke="#2A2A2C" stroke-width="1"/>
+                            <line x1="65" y1="160" x2="295" y2="160" stroke="#2A2A2C" stroke-width="1"/>
+                            <line x1="180" y1="45" x2="180" y2="275" stroke="#2A2A2C" stroke-width="1"/>
+
+                            <!-- Global Interconnect Arcs -->
+                            <path d="M 105 125 Q 180 75 255 115" fill="none" stroke="#B8975E" stroke-width="1.2" stroke-dasharray="3 4" opacity="0.7"/>
+                            <path d="M 105 125 Q 180 235 255 205" fill="none" stroke="#B8975E" stroke-width="1.2" stroke-dasharray="3 4" opacity="0.7"/>
+                            <path d="M 210 115 Q 245 160 255 205" fill="none" stroke="#B8975E" stroke-width="1.2" opacity="0.6"/>
+
+                            <!-- Regional Nodes -->
+                            <!-- AMR -->
+                            <circle cx="105" cy="125" r="26" fill="#111111" stroke="#B8975E" stroke-width="2"/>
+                            <text x="105" y="129" text-anchor="middle" fill="#B8975E" font-size="11" font-weight="700">AMR</text>
+                            <!-- EMEA -->
+                            <circle cx="205" cy="108" r="26" fill="#111111" stroke="#B8975E" stroke-width="2"/>
+                            <text x="205" y="112" text-anchor="middle" fill="#B8975E" font-size="11" font-weight="700">EMEA</text>
+                            <!-- APAC -->
+                            <circle cx="242" cy="205" r="26" fill="#111111" stroke="#B8975E" stroke-width="2"/>
+                            <text x="242" y="209" text-anchor="middle" fill="#B8975E" font-size="11" font-weight="700">APAC</text>
+                            <!-- JPAC -->
+                            <circle cx="272" cy="138" r="24" fill="#B8975E"/>
+                            <text x="272" y="142" text-anchor="middle" fill="#111111" font-size="10" font-weight="700">JPAC</text>
+                        </svg>
+                        <div class="visual-label">
+                            <h3>Global NOC Infrastructure</h3>
+                            <span>130+ Sites &bull; 64,000+ Employees &bull; $2M Saved</span>
                         </div>
-                        <h3 class="map-caption">Global Infrastructure</h3>
+                    </div>
+
+                    <!-- FRAME 4: EARLY CAREER FOUNDATION (TWC & WALMART) -->
+                    <div class="visual-frame" id="vis-foundation">
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <span class="metric-num">98%</span>
+                                <span class="metric-desc">Tier-3 SMB CSAT<br>(Time Warner Cable)</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-num">-15%</span>
+                                <span class="metric-desc">Inventory Shrinkage<br>(Walmart Lead)</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-num">-15%</span>
+                                <span class="metric-desc">Peak Overtime Cost<br>(Labor Scheduling)</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-num">100%</span>
+                                <span class="metric-desc">Safety &amp; Regulatory<br>Compliance</span>
+                            </div>
+                        </div>
+                        <div class="visual-label">
+                            <h3>Operational Foundation</h3>
+                            <span>Network Escalations &amp; Supply Chain Control</span>
+                        </div>
                     </div>
 
                 </div>
             </div>
 
-            <!-- Right Side: The Scrolling Text (Reordered) -->
+            <!-- RIGHT SIDE: SCROLLING CAREER NARRATIVE -->
             <div class="text-column">
                 
                 <!-- Block 1: Campaign Lab -->
-                <div class="scroll-block" data-visual="campaignlab">
+                <div class="scroll-block active" data-visual="campaignlab">
+                    <span class="role-date">March 2024 – Present</span>
                     <h3>Digital Architecture | The Campaign Lab</h3>
-                    <p>Architected automated CRM pipelines and e-commerce supply chains. Executed 15,600+ targeted digital touchpoints across North America and the UK, utilizing Python scripts and AI-assisted workflows to eliminate manual operational bottlenecks.</p>
+                    <p>Founder &amp; Technology Operations Manager directing automated CRM infrastructures and lifecycle systems from Colorado HQ with nationwide reach. Executed 15,600+ targeted outbound touchpoints (34.75% Open Rate) while deploying custom Python scripts and AI-assisted workflows to eliminate manual operational bottlenecks.</p>
                 </div>
 
                 <!-- Block 2: Amuse -->
                 <div class="scroll-block" data-visual="amuse">
-                    <h3>Regional Logistics | Amuse</h3>
-                    <p>Engineered supply chain and last-mile delivery logistics, scaling physical operations from 1 to 6 high-volume cities. Achieved a 35% reduction in delivery costs and a 40% reduction in potential financial losses through rigorous risk mitigation and IAM governance for 300+ employees.</p>
+                    <span class="role-date">September 2020 – July 2024</span>
+                    <h3>Regional Logistics | Open Road Delivery (Amuse)</h3>
+                    <p>Senior Operations Manager who scaled a hub-and-spoke last-mile delivery network across California—expanding into Sacramento, San Francisco, Los Angeles, Orange County, and San Diego. Cut delivery costs by 35%, reduced hiring costs by 20%, and mitigated financial risk by 40% while governing IAM (Okta, Google Workspace, Onfleet) for 300+ employees.</p>
                 </div>
 
                 <!-- Block 3: Apple -->
                 <div class="scroll-block" data-visual="apple">
+                    <span class="role-date">August 2012 – January 2020</span>
                     <h3>Global Network Operations | Apple</h3>
-                    <p>Supported enterprise infrastructure and security compliance for 64,000+ employees across 130+ global sites. Designed triage guides and case management processes that saved $2 million in operational costs annually and reduced technical escalations by 25%.</p>
+                    <p>Monitored real-time NOC performance across AMR, EMEA, APAC, and JPAC for 130+ global sites and 64,000+ employees. Built SQL leadership dashboards, reduced vendor escalations by 25%, maintained 99% Jamf security compliance, and engineered triage systems that saved $2 million annually in operational costs.</p>
+                </div>
+
+                <!-- Block 4: TWC & Walmart -->
+                <div class="scroll-block" data-visual="foundation">
+                    <span class="role-date">October 2007 – May 2011</span>
+                    <h3>Technical &amp; Inventory Foundation | TWC &amp; Walmart</h3>
+                    <p>Served as primary Tier-3 SMB technical escalation point at Time Warner Cable in Austin, resolving complex business network outages at a 98% CSAT. Previously led Inventory Control at Walmart in El Paso, cutting merchandise shrinkage and holiday overtime by 15% while maintaining 100% safety compliance.</p>
                 </div>
 
             </div>
         </section>
     </main>
 
-    <!-- TRACKING & SCROLL JAVASCRIPT -->
+    <!-- TRACKING & SCROLL-TELLING JAVASCRIPT -->
     <script>
         // 1. WEBHOOK TRACKING SYSTEM
-        const webhookUrl = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE'; // Add Webhook URL here
+        const webhookUrl = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
 
         function sendTrackingData(eventType, elementDetails) {
+            if (!webhookUrl || webhookUrl === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') return;
             fetch(webhookUrl, {
                 method: 'POST',
                 mode: 'no-cors',
@@ -171,32 +261,35 @@
             }
         });
 
-        // 2. VISUAL CROSS-FADE OBSERVER
+        // 2. SCROLL-TELLING OBSERVER (Center-Screen Trigger)
+        const scrollBlocks = document.querySelectorAll('.scroll-block');
+        const visualFrames = document.querySelectorAll('.visual-frame');
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const visualId = entry.target.getAttribute('data-visual');
                     
-                    // Hide all visual frames
-                    document.querySelectorAll('.visual-frame').forEach(frame => {
-                        frame.classList.remove('active');
-                    });
-                    
-                    // Fade in the target frame
+                    // Highlight active text block, dim others
+                    scrollBlocks.forEach(b => b.classList.remove('active'));
+                    entry.target.classList.add('active');
+
+                    // Cross-fade left-side visual frame
+                    visualFrames.forEach(frame => frame.classList.remove('active'));
                     const targetFrame = document.getElementById('vis-' + visualId);
                     if (targetFrame) {
                         targetFrame.classList.add('active');
                     }
                     
-                    // Log the scroll event
                     sendTrackingData('Scroll', 'Viewed: ' + visualId);
                 }
             });
-        }, { threshold: 0.5 }); // Triggers when 50% of the text block is in view
-
-        document.querySelectorAll('.scroll-block').forEach(block => {
-            observer.observe(block);
+        }, {
+            rootMargin: '-40% 0px -40% 0px',
+            threshold: 0
         });
+
+        scrollBlocks.forEach(block => observer.observe(block));
     </script>
 </body>
 </html>
