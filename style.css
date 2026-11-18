@@ -1,4 +1,139 @@
-/* TILE GRID MAP (BLOCK CARTOGRAM) */
+/* 1. BASE STYLES & LUXURY PALETTE */
+:root {
+    --obsidian: #111111;
+    --charcoal: #2C2C2E;
+    --champagne-gold: #B8975E;
+    --pearl-white: #FAFAFA;
+    --pure-white: #FFFFFF;
+    --subtle-border: #EAEAEA;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Roboto, sans-serif;
+    color: var(--charcoal);
+    background-color: var(--pure-white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { 
+    line-height: 1.2; 
+    margin-bottom: 16px; 
+    letter-spacing: -0.5px; 
+}
+
+p { 
+    margin-bottom: 24px; 
+    font-size: 1.15rem; 
+    color: var(--charcoal); 
+    font-weight: 300; 
+}
+
+/* 2. HERO SECTION */
+.hero-section {
+    background-color: var(--pearl-white);
+    padding: 140px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--subtle-border);
+}
+
+.hero-content { 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.hero-content h1 { 
+    font-size: 3.8rem; 
+    color: var(--obsidian); 
+    letter-spacing: -1.5px; 
+    font-weight: 700; 
+}
+
+.hero-content h2 { 
+    font-size: 1.4rem; 
+    color: var(--champagne-gold); 
+    font-weight: 500; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    margin-bottom: 28px; 
+}
+
+/* 3. BUTTON STYLING */
+button {
+    background-color: var(--obsidian);
+    color: var(--pure-white);
+    border: 1px solid var(--obsidian);
+    padding: 16px 36px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 24px;
+}
+
+button:hover {
+    background-color: var(--champagne-gold);
+    border-color: var(--champagne-gold);
+    box-shadow: 0 8px 20px rgba(184, 151, 94, 0.2);
+}
+
+/* 4. SCROLL CONTAINER (The Side-by-Side Layout) */
+.scroll-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+.visual-column { 
+    width: 50%; 
+    position: relative; 
+}
+
+.text-column { 
+    width: 50%; 
+    padding-left: 80px; 
+}
+
+.sticky-visual {
+    position: sticky;
+    top: 20vh;
+    height: 60vh;
+    background-color: var(--obsidian);
+    color: var(--pure-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.scroll-block {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.scroll-block h3 { 
+    font-size: 2rem; 
+    color: var(--obsidian); 
+    font-weight: 600; 
+}
+
+/* 5. TILE GRID MAP (BLOCK CARTOGRAM) */
 .block-map {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -10,7 +145,7 @@
 
 .state-block {
     aspect-ratio: 1 / 1;
-    background-color: #222222; /* Faded obsidian for inactive states */
+    background-color: #222222;
     color: #555555;
     display: flex;
     align-items: center;
@@ -21,14 +156,31 @@
     transition: all 0.4s ease;
 }
 
-/* The class toggled by JS when a state is highlighted */
 .state-block.highlight {
     background-color: var(--champagne-gold);
     color: var(--obsidian);
     box-shadow: 0 0 10px rgba(184, 151, 94, 0.4);
 }
 
-/* Adjust sticky visual flex direction so caption sits below map */
-.sticky-visual {
-    flex-direction: column; 
+/* 6. MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .scroll-container { 
+        flex-direction: column; 
+        padding: 60px 20px; 
+    }
+    .visual-column, .text-column { 
+        width: 100%; 
+        padding: 0; 
+    }
+    .sticky-visual { 
+        position: relative; 
+        top: 0; 
+        height: auto; 
+        padding: 40px 20px; 
+        margin-bottom: 50px; 
+    }
+    .scroll-block { 
+        min-height: auto; 
+        margin-bottom: 80px; 
+    }
 }
