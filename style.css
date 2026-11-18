@@ -1,442 +1,411 @@
-/* 1. BASE STYLES & UNIFIED OBSIDIAN PALETTE */
-:root {
-    --bg-main: #0D0D0F;
-    --bg-surface: #141417;
-    --bg-card: #1A1A1F;
-    --border-subtle: #26262C;
-    --champagne-gold: #B8975E;
-    --text-primary: #F5F5F7;
-    --text-secondary: #A1A1A6;
-    --emerald: #34D399;
-    --font-sans: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Roboto, sans-serif;
-    --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeraldo Cruz | Technical Operations & Systems Architect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-html {
-    scroll-behavior: smooth;
-}
+    <!-- STICKY TOP NAVIGATION BAR -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-name">Jeraldo Cruz</span>
+                <span class="nav-divider">|</span>
+                <span class="nav-title">Technical Operations Leader &amp; Systems Architect</span>
+            </div>
+            <div class="nav-links">
+                <a href="#experience" class="track-click">Experience</a>
+                <a href="#credentials" class="track-click">Stack &amp; Certs</a>
+            </div>
+        </div>
+    </nav>
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+    <!-- COMPACT INTRO HERO -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <p class="hero-eyebrow">// SYSTEMS ARCHITECTURE &bull; GLOBAL OPERATIONS &bull; AUTOMATION</p>
+            <h1>Bridging complex technical infrastructure with daily business operations.</h1>
+            <p class="hero-sub">Scaling distributed teams, engineering automated workflows, and driving data-backed cost reductions across global environments—including $2M in annual savings, 35% lower delivery costs, and 40% risk mitigation.</p>
+        </div>
+    </header>
 
-body {
-    font-family: var(--font-sans);
-    color: var(--text-primary);
-    background-color: var(--bg-main);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-}
+    <!-- STICKY SCROLL-TELLING SECTION -->
+    <main id="experience">
+        <section class="scroll-container">
+            
+            <!-- LEFT SIDE: STICKY VISUAL STAGE -->
+            <div class="visual-column">
+                <div class="sticky-visual">
+                    
+                    <!-- FRAME 1: CAMPAIGN LAB (DATA-DRIVEN US HEATMAP) -->
+                    <div class="visual-frame active" id="vis-campaignlab">
+                        <div class="block-map" id="campaign-heatmap">
+                            <!-- Row 1 -->
+                            <div class="state-block" style="grid-column: 1; grid-row: 1;" data-state="AK">AK</div>
+                            <div class="state-block" style="grid-column: 12; grid-row: 1;" data-state="ME">ME</div>
+                            <!-- Row 2 -->
+                            <div class="state-block" style="grid-column: 1; grid-row: 2;" data-state="WA">WA</div>
+                            <div class="state-block" style="grid-column: 2; grid-row: 2;" data-state="ID">ID</div>
+                            <div class="state-block" style="grid-column: 3; grid-row: 2;" data-state="MT">MT</div>
+                            <div class="state-block" style="grid-column: 4; grid-row: 2;" data-state="ND">ND</div>
+                            <div class="state-block" style="grid-column: 5; grid-row: 2;" data-state="MN">MN</div>
+                            <div class="state-block" style="grid-column: 6; grid-row: 2;" data-state="IL">IL</div>
+                            <div class="state-block" style="grid-column: 7; grid-row: 2;" data-state="WI">WI</div>
+                            <div class="state-block" style="grid-column: 8; grid-row: 2;" data-state="MI">MI</div>
+                            <div class="state-block" style="grid-column: 10; grid-row: 2;" data-state="NY">NY</div>
+                            <div class="state-block" style="grid-column: 11; grid-row: 2;" data-state="VT">VT</div>
+                            <div class="state-block" style="grid-column: 12; grid-row: 2;" data-state="NH">NH</div>
+                            <!-- Row 3 -->
+                            <div class="state-block" style="grid-column: 1; grid-row: 3;" data-state="OR">OR</div>
+                            <div class="state-block" style="grid-column: 2; grid-row: 3;" data-state="NV">NV</div>
+                            <div class="state-block" style="grid-column: 3; grid-row: 3;" data-state="WY">WY</div>
+                            <div class="state-block" style="grid-column: 4; grid-row: 3;" data-state="SD">SD</div>
+                            <div class="state-block" style="grid-column: 5; grid-row: 3;" data-state="IA">IA</div>
+                            <div class="state-block" style="grid-column: 6; grid-row: 3;" data-state="IN">IN</div>
+                            <div class="state-block" style="grid-column: 7; grid-row: 3;" data-state="OH">OH</div>
+                            <div class="state-block" style="grid-column: 8; grid-row: 3;" data-state="PA">PA</div>
+                            <div class="state-block" style="grid-column: 9; grid-row: 3;" data-state="NJ">NJ</div>
+                            <div class="state-block" style="grid-column: 10; grid-row: 3;" data-state="CT">CT</div>
+                            <div class="state-block" style="grid-column: 11; grid-row: 3;" data-state="RI">RI</div>
+                            <div class="state-block" style="grid-column: 12; grid-row: 3;" data-state="MA">MA</div>
+                            <!-- Row 4 -->
+                            <div class="state-block" style="grid-column: 1; grid-row: 4;" data-state="CA">CA</div>
+                            <div class="state-block" style="grid-column: 2; grid-row: 4;" data-state="UT">UT</div>
+                            <div class="state-block hq" style="grid-column: 3; grid-row: 4;" data-state="CO">CO</div>
+                            <div class="state-block" style="grid-column: 4; grid-row: 4;" data-state="NE">NE</div>
+                            <div class="state-block" style="grid-column: 5; grid-row: 4;" data-state="MO">MO</div>
+                            <div class="state-block" style="grid-column: 6; grid-row: 4;" data-state="KY">KY</div>
+                            <div class="state-block" style="grid-column: 7; grid-row: 4;" data-state="WV">WV</div>
+                            <div class="state-block" style="grid-column: 8; grid-row: 4;" data-state="VA">VA</div>
+                            <div class="state-block" style="grid-column: 9; grid-row: 4;" data-state="MD">MD</div>
+                            <div class="state-block" style="grid-column: 10; grid-row: 4;" data-state="DE">DE</div>
+                            <!-- Row 5 -->
+                            <div class="state-block" style="grid-column: 2; grid-row: 5;" data-state="AZ">AZ</div>
+                            <div class="state-block" style="grid-column: 3; grid-row: 5;" data-state="NM">NM</div>
+                            <div class="state-block" style="grid-column: 4; grid-row: 5;" data-state="KS">KS</div>
+                            <div class="state-block" style="grid-column: 5; grid-row: 5;" data-state="AR">AR</div>
+                            <div class="state-block" style="grid-column: 6; grid-row: 5;" data-state="TN">TN</div>
+                            <div class="state-block" style="grid-column: 7; grid-row: 5;" data-state="NC">NC</div>
+                            <div class="state-block" style="grid-column: 8; grid-row: 5;" data-state="SC">SC</div>
+                            <div class="state-block" style="grid-column: 9; grid-row: 5;" data-state="DC">DC</div>
+                            <!-- Row 6 -->
+                            <div class="state-block" style="grid-column: 4; grid-row: 6;" data-state="OK">OK</div>
+                            <div class="state-block" style="grid-column: 5; grid-row: 6;" data-state="LA">LA</div>
+                            <div class="state-block" style="grid-column: 6; grid-row: 6;" data-state="MS">MS</div>
+                            <div class="state-block" style="grid-column: 7; grid-row: 6;" data-state="AL">AL</div>
+                            <div class="state-block" style="grid-column: 8; grid-row: 6;" data-state="GA">GA</div>
+                            <!-- Row 7 & 8 -->
+                            <div class="state-block" style="grid-column: 4; grid-row: 7;" data-state="TX">TX</div>
+                            <div class="state-block" style="grid-column: 9; grid-row: 7;" data-state="FL">FL</div>
+                            <div class="state-block" style="grid-column: 1; grid-row: 8;" data-state="HI">HI</div>
+                        </div>
 
-/* 2. STICKY TOP NAVIGATION BAR */
-.top-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background-color: rgba(13, 13, 15, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-subtle);
-}
+                        <!-- HEATMAP LEGEND -->
+                        <div class="heatmap-legend">
+                            <span>0</span>
+                            <div class="legend-swatch heat-0"></div>
+                            <div class="legend-swatch heat-1"></div>
+                            <div class="legend-swatch heat-2"></div>
+                            <div class="legend-swatch heat-3"></div>
+                            <div class="legend-swatch heat-4"></div>
+                            <span>115</span>
+                            <span class="legend-sep">|</span>
+                            <span class="legend-hq-box"></span>
+                            <span>HQ (CO)</span>
+                        </div>
 
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+                        <div class="visual-label">
+                            <h3>National Reach Heatmap</h3>
+                            <span id="heatmap-readout">1,051 Total &bull; Hover a state for count</span>
+                        </div>
+                    </div>
 
-.nav-brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+                    <!-- FRAME 2: AMUSE (HUB-AND-SPOKE "WAGON WHEEL" SVG) -->
+                    <div class="visual-frame" id="vis-amuse">
+                        <svg class="custom-svg" viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="180" cy="160" r="112" fill="none" stroke="#2C2C2E" stroke-width="1.5" stroke-dasharray="4 6"/>
+                            <circle cx="180" cy="160" r="68" fill="none" stroke="#222222" stroke-width="1"/>
+                            
+                            <line x1="180" y1="160" x2="180" y2="48" stroke="#B8975E" stroke-width="1.5" opacity="0.7"/>
+                            <line x1="180" y1="160" x2="286" y2="125" stroke="#B8975E" stroke-width="1.5" opacity="0.7"/>
+                            <line x1="180" y1="160" x2="246" y2="250" stroke="#B8975E" stroke-width="1.5" opacity="0.7"/>
+                            <line x1="180" y1="160" x2="114" y2="250" stroke="#B8975E" stroke-width="1.5" opacity="0.7"/>
+                            <line x1="180" y1="160" x2="74" y2="125" stroke="#B8975E" stroke-width="1.5" opacity="0.7"/>
 
-.nav-name {
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    color: var(--text-primary);
-    text-transform: uppercase;
-}
+                            <circle cx="180" cy="48" r="24" fill="#141417" stroke="#B8975E" stroke-width="2"/>
+                            <text x="180" y="52" text-anchor="middle" fill="#FAFAFA" font-size="11" font-weight="600">SAC</text>
+                            <circle cx="74" cy="125" r="24" fill="#141417" stroke="#B8975E" stroke-width="2"/>
+                            <text x="74" y="129" text-anchor="middle" fill="#FAFAFA" font-size="11" font-weight="600">SF</text>
+                            <circle cx="286" cy="125" r="24" fill="#141417" stroke="#B8975E" stroke-width="2"/>
+                            <text x="286" y="129" text-anchor="middle" fill="#FAFAFA" font-size="11" font-weight="600">LA</text>
+                            <circle cx="246" cy="250" r="24" fill="#141417" stroke="#B8975E" stroke-width="2"/>
+                            <text x="246" y="254" text-anchor="middle" fill="#FAFAFA" font-size="11" font-weight="600">OC</text>
+                            <circle cx="114" cy="250" r="24" fill="#141417" stroke="#B8975E" stroke-width="2"/>
+                            <text x="114" y="254" text-anchor="middle" fill="#FAFAFA" font-size="11" font-weight="600">SD</text>
 
-.nav-divider {
-    color: var(--border-subtle);
-}
+                            <circle cx="180" cy="160" r="40" fill="#B8975E"/>
+                            <text x="180" y="157" text-anchor="middle" fill="#111111" font-size="10" font-weight="700" letter-spacing="1">CENTRAL</text>
+                            <text x="180" y="171" text-anchor="middle" fill="#111111" font-size="10" font-weight="700" letter-spacing="1">OPS HQ</text>
+                        </svg>
+                        <div class="visual-label">
+                            <h3>Hub-and-Spoke Logistics</h3>
+                            <span>California Scaling &bull; -35% Delivery Costs</span>
+                        </div>
+                    </div>
 
-.nav-title {
-    font-size: 0.85rem;
-    color: var(--champagne-gold);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: 500;
-}
+                    <!-- FRAME 3: APPLE (WIREFRAME GLOBE SVG) -->
+                    <div class="visual-frame" id="vis-apple">
+                        <svg class="custom-svg" viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="180" cy="160" r="115" fill="none" stroke="#333333" stroke-width="1.5"/>
+                            <ellipse cx="180" cy="160" rx="58" ry="115" fill="none" stroke="#2A2A2C" stroke-width="1"/>
+                            <ellipse cx="180" cy="160" rx="115" ry="42" fill="none" stroke="#2A2A2C" stroke-width="1"/>
+                            <line x1="65" y1="160" x2="295" y2="160" stroke="#2A2A2C" stroke-width="1"/>
+                            <line x1="180" y1="45" x2="180" y2="275" stroke="#2A2A2C" stroke-width="1"/>
 
-.nav-links {
-    display: flex;
-    gap: 28px;
-}
+                            <path d="M 105 125 Q 180 75 255 115" fill="none" stroke="#B8975E" stroke-width="1.2" stroke-dasharray="3 4" opacity="0.7"/>
+                            <path d="M 105 125 Q 180 235 255 205" fill="none" stroke="#B8975E" stroke-width="1.2" stroke-dasharray="3 4" opacity="0.7"/>
+                            <path d="M 210 115 Q 245 160 255 205" fill="none" stroke="#B8975E" stroke-width="1.2" opacity="0.6"/>
 
-.nav-links a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-family: var(--font-mono);
-    transition: color 0.2s ease;
-}
+                            <circle cx="105" cy="125" r="26" fill="#141417" stroke="#B8975E" stroke-width="2"/>
+                            <text x="105" y="129" text-anchor="middle" fill="#B8975E" font-size="11" font-weight="700">AMR</text>
+                            <circle cx="205" cy="108" r="26" fill="#141417" stroke="#B8975E" stroke-width="2"/>
+                            <text x="205" y="112" text-anchor="middle" fill="#B8975E" font-size="11" font-weight="700">EMEA</text>
+                            <circle cx="242" cy="205" r="26" fill="#141417" stroke="#B8975E" stroke-width="2"/>
+                            <text x="242" y="209" text-anchor="middle" fill="#B8975E" font-size="11" font-weight="700">APAC</text>
+                            <circle cx="272" cy="138" r="24" fill="#B8975E"/>
+                            <text x="272" y="142" text-anchor="middle" fill="#111111" font-size="10" font-weight="700">JPAC</text>
+                        </svg>
+                        <div class="visual-label">
+                            <h3>Global NOC Infrastructure</h3>
+                            <span>130+ Sites &bull; 64,000+ Employees &bull; $2M Saved</span>
+                        </div>
+                    </div>
 
-.nav-links a:hover {
-    color: var(--champagne-gold);
-}
+                    <!-- FRAME 4: EARLY CAREER FOUNDATION (TWC & WALMART) -->
+                    <div class="visual-frame" id="vis-foundation">
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <span class="metric-num">98%</span>
+                                <span class="metric-desc">Tier-3 SMB CSAT<br>(Time Warner Cable)</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-num">-15%</span>
+                                <span class="metric-desc">Inventory Shrinkage<br>(Walmart Lead)</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-num">-15%</span>
+                                <span class="metric-desc">Peak Overtime Cost<br>(Labor Scheduling)</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-num">100%</span>
+                                <span class="metric-desc">Safety &amp; Regulatory<br>Compliance</span>
+                            </div>
+                        </div>
+                        <div class="visual-label">
+                            <h3>Operational Foundation</h3>
+                            <span>Network Escalations &amp; Supply Chain Control</span>
+                        </div>
+                    </div>
 
-/* 3. COMPACT HERO INTRO */
-.hero-section {
-    padding: 150px 24px 80px;
-    max-width: 1200px;
-    margin: 0 auto;
-    border-bottom: 1px solid var(--border-subtle);
-}
+                </div>
+            </div>
 
-.hero-content {
-    max-width: 820px;
-}
+            <!-- RIGHT SIDE: SCROLLING CAREER NARRATIVE -->
+            <div class="text-column">
+                
+                <!-- Block 1: Campaign Lab -->
+                <div class="scroll-block active" data-visual="campaignlab">
+                    <span class="role-date">March 2024 – Present</span>
+                    <h3>Digital Architecture | The Campaign Lab</h3>
+                    <p>Founder &amp; Technology Operations Manager directing automated CRM infrastructures and lifecycle systems from Colorado HQ with nationwide reach. Executed 15,600+ targeted outbound touchpoints (34.75% Open Rate) while deploying custom Python scripts and AI-assisted workflows to eliminate manual operational bottlenecks.</p>
+                </div>
 
-.hero-eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--champagne-gold);
-    letter-spacing: 1.5px;
-    margin-bottom: 18px;
-}
+                <!-- Block 2: Amuse -->
+                <div class="scroll-block" data-visual="amuse">
+                    <span class="role-date">September 2020 – July 2024</span>
+                    <h3>Regional Logistics | Open Road Delivery (Amuse)</h3>
+                    <p>Senior Operations Manager who scaled a hub-and-spoke last-mile delivery network across California—expanding into Sacramento, San Francisco, Los Angeles, Orange County, and San Diego. Cut delivery costs by 35%, reduced hiring costs by 20%, and mitigated financial risk by 40% while governing IAM (Okta, Google Workspace, Onfleet) for 300+ employees.</p>
+                </div>
 
-.hero-content h1 {
-    font-size: 3.1rem;
-    font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -1px;
-    color: var(--text-primary);
-    margin-bottom: 24px;
-}
+                <!-- Block 3: Apple -->
+                <div class="scroll-block" data-visual="apple">
+                    <span class="role-date">August 2012 – January 2020</span>
+                    <h3>Global Network Operations | Apple</h3>
+                    <p>Monitored real-time NOC performance across AMR, EMEA, APAC, and JPAC for 130+ global sites and 64,000+ employees. Built SQL leadership dashboards, reduced vendor escalations by 25%, maintained 99% Jamf security compliance, and engineered triage systems that saved $2 million annually in operational costs.</p>
+                </div>
 
-.hero-sub {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    font-weight: 300;
-    line-height: 1.7;
-}
+                <!-- Block 4: TWC & Walmart -->
+                <div class="scroll-block" data-visual="foundation">
+                    <span class="role-date">October 2007 – May 2011</span>
+                    <h3>Technical &amp; Inventory Foundation | TWC &amp; Walmart</h3>
+                    <p>Served as primary Tier-3 SMB technical escalation point at Time Warner Cable in Austin, resolving complex business network outages at a 98% CSAT. Previously led Inventory Control at Walmart in El Paso, cutting merchandise shrinkage and holiday overtime by 15% while maintaining 100% safety compliance.</p>
+                </div>
 
-/* 4. STICKY SCROLL CONTAINER */
-.scroll-container {
-    display: flex;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 24px 140px;
-}
+            </div>
+        </section>
+    </main>
 
-.visual-column {
-    width: 50%;
-    position: sticky;
-    top: 100px;
-}
+    <!-- TECHY TERMINAL-STYLE STACK & CERTIFICATIONS -->
+    <section id="credentials" class="tech-certs-section">
+        <div class="tech-certs-container">
+            
+            <!-- CORE TECH STACK -->
+            <div class="terminal-header">
+                <span class="terminal-prompt">&gt;_</span>
+                <span class="terminal-cmd">list --stack --production</span>
+            </div>
+            <div class="pill-grid">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">SQL</span>
+                <span class="tech-pill">Google Workspace Super Admin</span>
+                <span class="tech-pill">Okta (IAM)</span>
+                <span class="tech-pill">Jamf</span>
+                <span class="tech-pill">Vendasta CRM</span>
+                <span class="tech-pill">Supabase</span>
+                <span class="tech-pill">HTML / CSS / JS</span>
+                <span class="tech-pill">Airtable</span>
+                <span class="tech-pill">Retool</span>
+                <span class="tech-pill">Zendesk</span>
+                <span class="tech-pill">Salesforce</span>
+                <span class="tech-pill">Onfleet</span>
+            </div>
 
-.sticky-visual {
-    position: relative;
-    height: 70vh;
-    min-height: 460px;
-    max-height: 600px;
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-subtle);
-    border-radius: 8px;
-    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-}
+            <!-- VERIFIED CREDENTIALS MATRIX -->
+            <div class="terminal-header" style="margin-top: 72px;">
+                <span class="terminal-prompt">&gt;_</span>
+                <span class="terminal-cmd">verify --credentials --all</span>
+            </div>
 
-/* 5. VISUAL CROSS-FADE FRAMES */
-.visual-frame {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 36px;
-    opacity: 0;
-    transform: translateY(12px);
-    transition: opacity 0.55s ease, transform 0.55s ease;
-    pointer-events: none;
-}
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-card-top">
+                        <span class="cert-issuer">IBM</span>
+                        <span class="cert-status"><span class="status-dot"></span>VERIFIED</span>
+                    </div>
+                    <h4>Generative AI for Executives &amp; Business Leaders</h4>
+                    <p>GenAI Integration Strategy, Use Case Formulation &amp; Executive Deployment</p>
+                </div>
 
-.visual-frame.active {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
+                <div class="cert-card">
+                    <div class="cert-card-top">
+                        <span class="cert-issuer">IBM</span>
+                        <span class="cert-status"><span class="status-dot"></span>VERIFIED</span>
+                    </div>
+                    <h4>Data Analysis &amp; SQL for Data Science</h4>
+                    <p>Python for Data Science, Databases &amp; SQL, Cognos Dashboards, Excel Analytics</p>
+                </div>
 
-.visual-label {
-    margin-top: 28px;
-    text-align: center;
-}
-.visual-label h3 {
-    color: var(--champagne-gold);
-    font-size: 1.35rem;
-    font-weight: 500;
-    margin-bottom: 4px;
-    letter-spacing: 0.5px;
-}
-.visual-label span {
-    color: var(--text-secondary);
-    font-size: 0.88rem;
-    font-family: var(--font-mono);
-}
+                <div class="cert-card">
+                    <div class="cert-card-top">
+                        <span class="cert-issuer">RUTGERS UNIVERSITY</span>
+                        <span class="cert-status"><span class="status-dot"></span>VERIFIED</span>
+                    </div>
+                    <h4>Supply Chain Analytics</h4>
+                    <p>Logistics Optimization, Network Capacity Modeling &amp; Operational Forecasting</p>
+                </div>
 
-/* 6. RIGHT COLUMN: MATCHED-BACKGROUND SCROLLING TILES */
-.text-column {
-    width: 50%;
-    padding-left: 72px;
-}
+                <div class="cert-card">
+                    <div class="cert-card-top">
+                        <span class="cert-issuer">UC IRVINE</span>
+                        <span class="cert-status"><span class="status-dot"></span>VERIFIED</span>
+                    </div>
+                    <h4>Management &amp; Strategic Planning</h4>
+                    <p>Essentials of Strategic Planning &amp; Fundamentals of Enterprise Management</p>
+                </div>
+            </div>
 
-.scroll-block {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 32px 0 32px 32px;
-    border-left: 2px solid var(--border-subtle);
-    opacity: 0.25;
-    transition: opacity 0.45s ease, border-color 0.45s ease;
-}
+        </div>
+    </section>
 
-.scroll-block.active {
-    opacity: 1;
-    border-left-color: var(--champagne-gold);
-}
+    <!-- TRACKING, HEATMAP & SCROLL-TELLING JAVASCRIPT -->
+    <script>
+        // 1. WEBHOOK TRACKING SYSTEM
+        const webhookUrl = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
 
-.role-date {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--champagne-gold);
-    margin-bottom: 12px;
-}
+        function sendTrackingData(eventType, elementDetails) {
+            if (!webhookUrl || webhookUrl === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') return;
+            fetch(webhookUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    eventType: eventType,
+                    element: elementDetails,
+                    page: window.location.pathname
+                })
+            });
+        }
 
-.scroll-block h3 {
-    font-size: 1.9rem;
-    color: var(--text-primary);
-    font-weight: 600;
-    margin-bottom: 16px;
-    letter-spacing: -0.5px;
-}
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.track-click')) {
+                let buttonName = e.target.innerText || 'Unnamed Link';
+                sendTrackingData('Click', buttonName);
+            }
+        });
 
-.scroll-block p {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    font-weight: 300;
-    line-height: 1.7;
-}
+        // 2. CAMPAIGN LAB HEATMAP ENGINE
+        const campaignLabData = {
+            AK: 2,  AL: 15, AR: 10, AZ: 20, CA: 112, CO: 37, CT: 8,  DE: 0,  FL: 66, GA: 26,
+            HI: 4,  IA: 9,  ID: 3,  IL: 32, IN: 14,  KS: 10, KY: 7,  LA: 9,  MA: 33, MD: 17,
+            ME: 4,  MI: 34, MN: 32, MO: 28, MS: 4,   MT: 3,  NC: 58, ND: 2,  NE: 12, NH: 3,
+            NJ: 26, NM: 7,  NV: 12, NY: 45, OH: 34,  OK: 6,  OR: 18, PA: 30, RI: 5,  SC: 12,
+            SD: 5,  TN: 21, TX: 115, UT: 3, VA: 28,  VT: 3,  WA: 30, WI: 35, WV: 2,  WY: 0,
+            DC: 0
+        };
 
-/* 7. CAMPAIGN LAB (US TILE GRID MAP) */
-.block-map {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    gap: 4px;
-    width: 100%;
-    max-width: 420px;
-}
-.state-block {
-    aspect-ratio: 1 / 1;
-    background-color: #222226;
-    color: #555555;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.68rem;
-    font-weight: 600;
-    border-radius: 3px;
-}
-.state-block.highlight {
-    background-color: var(--champagne-gold);
-    color: #111111;
-}
-.state-block.hq {
-    background-color: #FFFFFF;
-    color: #111111;
-    box-shadow: 0 0 16px rgba(255, 255, 255, 0.85);
-    transform: scale(1.18);
-    z-index: 2;
-}
+        function getHeatTier(val) {
+            if (val === 0) return 'heat-0';
+            if (val <= 10) return 'heat-1';
+            if (val <= 25) return 'heat-2';
+            if (val <= 50) return 'heat-3';
+            return 'heat-4';
+        }
 
-/* 8. CUSTOM SVGS */
-.custom-svg {
-    width: 100%;
-    max-width: 360px;
-    height: auto;
-}
+        const heatmapReadout = document.getElementById('heatmap-readout');
+        const defaultReadout = '1,051 Total • Hover a state for count';
 
-/* 9. FOUNDATION METRICS GRID */
-.metrics-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    width: 100%;
-    max-width: 380px;
-}
-.metric-card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-subtle);
-    border-radius: 6px;
-    padding: 22px 14px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.metric-num {
-    font-family: var(--font-mono);
-    font-size: 1.9rem;
-    font-weight: 700;
-    color: var(--champagne-gold);
-    line-height: 1.1;
-    margin-bottom: 8px;
-}
-.metric-desc {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    line-height: 1.35;
-}
+        document.querySelectorAll('#campaign-heatmap .state-block').forEach(block => {
+            const st = block.getAttribute('data-state');
+            const val = campaignLabData[st] ?? 0;
+            block.classList.add(getHeatTier(val));
+            block.setAttribute('title', `${st}: ${val}`);
 
-/* 10. TECHY TERMINAL STACK & CREDENTIALS SECTION */
-.tech-certs-section {
-    background-color: var(--bg-surface);
-    border-top: 1px solid var(--border-subtle);
-    padding: 100px 24px 120px;
-}
+            block.addEventListener('mouseenter', () => {
+                const hqTag = st === 'CO' ? ' (HQ)' : '';
+                heatmapReadout.innerText = `${st}${hqTag}: ${val} Total`;
+            });
+            block.addEventListener('mouseleave', () => {
+                heatmapReadout.innerText = defaultReadout;
+            });
+        });
 
-.tech-certs-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        // 3. SCROLL-TELLING OBSERVER
+        const scrollBlocks = document.querySelectorAll('.scroll-block');
+        const visualFrames = document.querySelectorAll('.visual-frame');
 
-.terminal-header {
-    font-family: var(--font-mono);
-    font-size: 1.05rem;
-    margin-bottom: 28px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const visualId = entry.target.getAttribute('data-visual');
+                    
+                    scrollBlocks.forEach(b => b.classList.remove('active'));
+                    entry.target.classList.add('active');
 
-.terminal-prompt {
-    color: var(--champagne-gold);
-    font-weight: 700;
-}
+                    visualFrames.forEach(frame => frame.classList.remove('active'));
+                    const targetFrame = document.getElementById('vis-' + visualId);
+                    if (targetFrame) {
+                        targetFrame.classList.add('active');
+                    }
+                    
+                    sendTrackingData('Scroll', 'Viewed: ' + visualId);
+                }
+            });
+        }, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
 
-.terminal-cmd {
-    color: var(--text-primary);
-    letter-spacing: 0.5px;
-}
-
-/* Tech Pills */
-.pill-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.tech-pill {
-    font-family: var(--font-mono);
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-subtle);
-    padding: 10px 18px;
-    border-radius: 4px;
-    font-size: 0.88rem;
-    color: var(--text-primary);
-    transition: all 0.25s ease;
-}
-
-.tech-pill:hover {
-    border-color: var(--champagne-gold);
-    color: var(--champagne-gold);
-    transform: translateY(-2px);
-}
-
-/* Verified Credential Cards */
-.cert-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.cert-card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-subtle);
-    border-radius: 6px;
-    padding: 28px;
-    transition: border-color 0.25s ease, transform 0.25s ease;
-}
-
-.cert-card:hover {
-    border-color: var(--champagne-gold);
-    transform: translateY(-3px);
-}
-
-.cert-card-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-}
-
-.cert-issuer {
-    color: var(--champagne-gold);
-    letter-spacing: 1.5px;
-    font-weight: 600;
-}
-
-.cert-status {
-    color: var(--emerald);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    letter-spacing: 1px;
-}
-
-.status-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background-color: var(--emerald);
-    box-shadow: 0 0 8px var(--emerald);
-}
-
-.cert-card h4 {
-    font-size: 1.25rem;
-    color: var(--text-primary);
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.cert-card p {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    font-weight: 300;
-    line-height: 1.55;
-}
-
-/* 11. MOBILE RESPONSIVENESS */
-@media (max-width: 768px) {
-    .nav-divider, .nav-title { display: none; }
-    .hero-content h1 { font-size: 2.2rem; }
-    .scroll-container { flex-direction: column; padding: 40px 20px; }
-    .visual-column { width: 100%; position: sticky; top: 64px; z-index: 10; }
-    .sticky-visual { height: 320px; min-height: 320px; margin-bottom: 30px; }
-    .text-column { width: 100%; padding-left: 0; }
-    .scroll-block { min-height: 55vh; opacity: 1; padding: 20px 0 20px 20px; }
-    .cert-grid { grid-template-columns: 1fr; }
-}
+        scrollBlocks.forEach(block => observer.observe(block));
+    </script>
+</body>
+</html>
