@@ -40,71 +40,86 @@
             <div class="visual-column">
                 <div class="sticky-visual">
                     
-                    <!-- FRAME 1: CAMPAIGN LAB (US TILE GRID MAP + CO HQ) -->
+                    <!-- FRAME 1: CAMPAIGN LAB (DATA-DRIVEN US HEATMAP) -->
                     <div class="visual-frame active" id="vis-campaignlab">
-                        <div class="block-map">
+                        <div class="block-map" id="campaign-heatmap">
                             <!-- Row 1 -->
-                            <div class="state-block highlight" style="grid-column: 1; grid-row: 1;">AK</div>
-                            <div class="state-block highlight" style="grid-column: 12; grid-row: 1;">ME</div>
+                            <div class="state-block" style="grid-column: 1; grid-row: 1;" data-state="AK">AK</div>
+                            <div class="state-block" style="grid-column: 12; grid-row: 1;" data-state="ME">ME</div>
                             <!-- Row 2 -->
-                            <div class="state-block highlight" style="grid-column: 1; grid-row: 2;">WA</div>
-                            <div class="state-block highlight" style="grid-column: 2; grid-row: 2;">ID</div>
-                            <div class="state-block highlight" style="grid-column: 3; grid-row: 2;">MT</div>
-                            <div class="state-block highlight" style="grid-column: 4; grid-row: 2;">ND</div>
-                            <div class="state-block highlight" style="grid-column: 5; grid-row: 2;">MN</div>
-                            <div class="state-block highlight" style="grid-column: 6; grid-row: 2;">IL</div>
-                            <div class="state-block highlight" style="grid-column: 7; grid-row: 2;">WI</div>
-                            <div class="state-block highlight" style="grid-column: 8; grid-row: 2;">MI</div>
-                            <div class="state-block highlight" style="grid-column: 10; grid-row: 2;">NY</div>
-                            <div class="state-block highlight" style="grid-column: 11; grid-row: 2;">VT</div>
-                            <div class="state-block highlight" style="grid-column: 12; grid-row: 2;">NH</div>
+                            <div class="state-block" style="grid-column: 1; grid-row: 2;" data-state="WA">WA</div>
+                            <div class="state-block" style="grid-column: 2; grid-row: 2;" data-state="ID">ID</div>
+                            <div class="state-block" style="grid-column: 3; grid-row: 2;" data-state="MT">MT</div>
+                            <div class="state-block" style="grid-column: 4; grid-row: 2;" data-state="ND">ND</div>
+                            <div class="state-block" style="grid-column: 5; grid-row: 2;" data-state="MN">MN</div>
+                            <div class="state-block" style="grid-column: 6; grid-row: 2;" data-state="IL">IL</div>
+                            <div class="state-block" style="grid-column: 7; grid-row: 2;" data-state="WI">WI</div>
+                            <div class="state-block" style="grid-column: 8; grid-row: 2;" data-state="MI">MI</div>
+                            <div class="state-block" style="grid-column: 10; grid-row: 2;" data-state="NY">NY</div>
+                            <div class="state-block" style="grid-column: 11; grid-row: 2;" data-state="VT">VT</div>
+                            <div class="state-block" style="grid-column: 12; grid-row: 2;" data-state="NH">NH</div>
                             <!-- Row 3 -->
-                            <div class="state-block highlight" style="grid-column: 1; grid-row: 3;">OR</div>
-                            <div class="state-block highlight" style="grid-column: 2; grid-row: 3;">NV</div>
-                            <div class="state-block highlight" style="grid-column: 3; grid-row: 3;">WY</div>
-                            <div class="state-block highlight" style="grid-column: 4; grid-row: 3;">SD</div>
-                            <div class="state-block highlight" style="grid-column: 5; grid-row: 3;">IA</div>
-                            <div class="state-block highlight" style="grid-column: 6; grid-row: 3;">IN</div>
-                            <div class="state-block highlight" style="grid-column: 7; grid-row: 3;">OH</div>
-                            <div class="state-block highlight" style="grid-column: 8; grid-row: 3;">PA</div>
-                            <div class="state-block highlight" style="grid-column: 9; grid-row: 3;">NJ</div>
-                            <div class="state-block highlight" style="grid-column: 10; grid-row: 3;">CT</div>
-                            <div class="state-block highlight" style="grid-column: 11; grid-row: 3;">RI</div>
-                            <div class="state-block highlight" style="grid-column: 12; grid-row: 3;">MA</div>
+                            <div class="state-block" style="grid-column: 1; grid-row: 3;" data-state="OR">OR</div>
+                            <div class="state-block" style="grid-column: 2; grid-row: 3;" data-state="NV">NV</div>
+                            <div class="state-block" style="grid-column: 3; grid-row: 3;" data-state="WY">WY</div>
+                            <div class="state-block" style="grid-column: 4; grid-row: 3;" data-state="SD">SD</div>
+                            <div class="state-block" style="grid-column: 5; grid-row: 3;" data-state="IA">IA</div>
+                            <div class="state-block" style="grid-column: 6; grid-row: 3;" data-state="IN">IN</div>
+                            <div class="state-block" style="grid-column: 7; grid-row: 3;" data-state="OH">OH</div>
+                            <div class="state-block" style="grid-column: 8; grid-row: 3;" data-state="PA">PA</div>
+                            <div class="state-block" style="grid-column: 9; grid-row: 3;" data-state="NJ">NJ</div>
+                            <div class="state-block" style="grid-column: 10; grid-row: 3;" data-state="CT">CT</div>
+                            <div class="state-block" style="grid-column: 11; grid-row: 3;" data-state="RI">RI</div>
+                            <div class="state-block" style="grid-column: 12; grid-row: 3;" data-state="MA">MA</div>
                             <!-- Row 4 -->
-                            <div class="state-block highlight" style="grid-column: 1; grid-row: 4;">CA</div>
-                            <div class="state-block highlight" style="grid-column: 2; grid-row: 4;">UT</div>
-                            <div class="state-block hq" style="grid-column: 3; grid-row: 4;">CO</div>
-                            <div class="state-block highlight" style="grid-column: 4; grid-row: 4;">NE</div>
-                            <div class="state-block highlight" style="grid-column: 5; grid-row: 4;">MO</div>
-                            <div class="state-block highlight" style="grid-column: 6; grid-row: 4;">KY</div>
-                            <div class="state-block highlight" style="grid-column: 7; grid-row: 4;">WV</div>
-                            <div class="state-block highlight" style="grid-column: 8; grid-row: 4;">VA</div>
-                            <div class="state-block highlight" style="grid-column: 9; grid-row: 4;">MD</div>
-                            <div class="state-block highlight" style="grid-column: 10; grid-row: 4;">DE</div>
+                            <div class="state-block" style="grid-column: 1; grid-row: 4;" data-state="CA">CA</div>
+                            <div class="state-block" style="grid-column: 2; grid-row: 4;" data-state="UT">UT</div>
+                            <div class="state-block hq" style="grid-column: 3; grid-row: 4;" data-state="CO">CO</div>
+                            <div class="state-block" style="grid-column: 4; grid-row: 4;" data-state="NE">NE</div>
+                            <div class="state-block" style="grid-column: 5; grid-row: 4;" data-state="MO">MO</div>
+                            <div class="state-block" style="grid-column: 6; grid-row: 4;" data-state="KY">KY</div>
+                            <div class="state-block" style="grid-column: 7; grid-row: 4;" data-state="WV">WV</div>
+                            <div class="state-block" style="grid-column: 8; grid-row: 4;" data-state="VA">VA</div>
+                            <div class="state-block" style="grid-column: 9; grid-row: 4;" data-state="MD">MD</div>
+                            <div class="state-block" style="grid-column: 10; grid-row: 4;" data-state="DE">DE</div>
                             <!-- Row 5 -->
-                            <div class="state-block highlight" style="grid-column: 2; grid-row: 5;">AZ</div>
-                            <div class="state-block highlight" style="grid-column: 3; grid-row: 5;">NM</div>
-                            <div class="state-block highlight" style="grid-column: 4; grid-row: 5;">KS</div>
-                            <div class="state-block highlight" style="grid-column: 5; grid-row: 5;">AR</div>
-                            <div class="state-block highlight" style="grid-column: 6; grid-row: 5;">TN</div>
-                            <div class="state-block highlight" style="grid-column: 7; grid-row: 5;">NC</div>
-                            <div class="state-block highlight" style="grid-column: 8; grid-row: 5;">SC</div>
-                            <div class="state-block highlight" style="grid-column: 9; grid-row: 5;">DC</div>
+                            <div class="state-block" style="grid-column: 2; grid-row: 5;" data-state="AZ">AZ</div>
+                            <div class="state-block" style="grid-column: 3; grid-row: 5;" data-state="NM">NM</div>
+                            <div class="state-block" style="grid-column: 4; grid-row: 5;" data-state="KS">KS</div>
+                            <div class="state-block" style="grid-column: 5; grid-row: 5;" data-state="AR">AR</div>
+                            <div class="state-block" style="grid-column: 6; grid-row: 5;" data-state="TN">TN</div>
+                            <div class="state-block" style="grid-column: 7; grid-row: 5;" data-state="NC">NC</div>
+                            <div class="state-block" style="grid-column: 8; grid-row: 5;" data-state="SC">SC</div>
+                            <div class="state-block" style="grid-column: 9; grid-row: 5;" data-state="DC">DC</div>
                             <!-- Row 6 -->
-                            <div class="state-block highlight" style="grid-column: 4; grid-row: 6;">OK</div>
-                            <div class="state-block highlight" style="grid-column: 5; grid-row: 6;">LA</div>
-                            <div class="state-block highlight" style="grid-column: 6; grid-row: 6;">MS</div>
-                            <div class="state-block highlight" style="grid-column: 7; grid-row: 6;">AL</div>
-                            <div class="state-block highlight" style="grid-column: 8; grid-row: 6;">GA</div>
+                            <div class="state-block" style="grid-column: 4; grid-row: 6;" data-state="OK">OK</div>
+                            <div class="state-block" style="grid-column: 5; grid-row: 6;" data-state="LA">LA</div>
+                            <div class="state-block" style="grid-column: 6; grid-row: 6;" data-state="MS">MS</div>
+                            <div class="state-block" style="grid-column: 7; grid-row: 6;" data-state="AL">AL</div>
+                            <div class="state-block" style="grid-column: 8; grid-row: 6;" data-state="GA">GA</div>
                             <!-- Row 7 & 8 -->
-                            <div class="state-block highlight" style="grid-column: 4; grid-row: 7;">TX</div>
-                            <div class="state-block highlight" style="grid-column: 9; grid-row: 7;">FL</div>
-                            <div class="state-block highlight" style="grid-column: 1; grid-row: 8;">HI</div>
+                            <div class="state-block" style="grid-column: 4; grid-row: 7;" data-state="TX">TX</div>
+                            <div class="state-block" style="grid-column: 9; grid-row: 7;" data-state="FL">FL</div>
+                            <div class="state-block" style="grid-column: 1; grid-row: 8;" data-state="HI">HI</div>
                         </div>
+
+                        <!-- HEATMAP LEGEND -->
+                        <div class="heatmap-legend">
+                            <span>0</span>
+                            <div class="legend-swatch heat-0"></div>
+                            <div class="legend-swatch heat-1"></div>
+                            <div class="legend-swatch heat-2"></div>
+                            <div class="legend-swatch heat-3"></div>
+                            <div class="legend-swatch heat-4"></div>
+                            <span>115</span>
+                            <span class="legend-sep">|</span>
+                            <span class="legend-hq-box"></span>
+                            <span>HQ (CO)</span>
+                        </div>
+
                         <div class="visual-label">
-                            <h3>National Reach</h3>
-                            <span>HQ: Colorado &bull; 50-State Automated Pipeline</span>
+                            <h3>National Reach Heatmap</h3>
+                            <span id="heatmap-readout">1,051 Total &bull; Hover a state for count</span>
                         </div>
                     </div>
 
@@ -233,29 +248,69 @@
         </section>
     </main>
 
-    <!-- TECHY TERMINAL-STYLE STACK & CERTIFICATIONS -->
+    <!-- ARCHITECTURAL STACK & VERIFIED CREDENTIALS -->
     <section id="credentials" class="tech-certs-section">
         <div class="tech-certs-container">
             
-            <!-- CORE TECH STACK -->
+            <!-- CATEGORIZED ARCHITECTURE STACK -->
             <div class="terminal-header">
                 <span class="terminal-prompt">&gt;_</span>
-                <span class="terminal-cmd">list --stack --production</span>
+                <span class="terminal-cmd">inspect --architecture --stack</span>
             </div>
-            <div class="pill-grid">
-                <span class="tech-pill">Python</span>
-                <span class="tech-pill">SQL</span>
-                <span class="tech-pill">Google Workspace Super Admin</span>
-                <span class="tech-pill">Okta (IAM)</span>
-                <span class="tech-pill">Jamf</span>
-                <span class="tech-pill">Vendasta CRM</span>
-                <span class="tech-pill">Supabase</span>
-                <span class="tech-pill">HTML / CSS / JS</span>
-                <span class="tech-pill">Airtable</span>
-                <span class="tech-pill">Retool</span>
-                <span class="tech-pill">Zendesk</span>
-                <span class="tech-pill">Salesforce</span>
-                <span class="tech-pill">Onfleet</span>
+
+            <div class="stack-grid">
+                <div class="stack-card">
+                    <div class="stack-card-header">
+                        <span class="stack-index">01 //</span>
+                        <span class="stack-category">Data, Analytics &amp; Automation</span>
+                    </div>
+                    <div class="pill-grid">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">SQL</span>
+                        <span class="tech-pill">Supabase</span>
+                        <span class="tech-pill">Cognos BI</span>
+                        <span class="tech-pill">AI Workflows</span>
+                    </div>
+                </div>
+
+                <div class="stack-card">
+                    <div class="stack-card-header">
+                        <span class="stack-index">02 //</span>
+                        <span class="stack-category">Identity, Security &amp; Enterprise IT</span>
+                    </div>
+                    <div class="pill-grid">
+                        <span class="tech-pill">Okta (IAM)</span>
+                        <span class="tech-pill">Jamf Pro</span>
+                        <span class="tech-pill">Google Workspace Super Admin</span>
+                        <span class="tech-pill">Access Governance</span>
+                    </div>
+                </div>
+
+                <div class="stack-card">
+                    <div class="stack-card-header">
+                        <span class="stack-index">03 //</span>
+                        <span class="stack-category">CRM, Growth &amp; Web Systems</span>
+                    </div>
+                    <div class="pill-grid">
+                        <span class="tech-pill">Vendasta CRM</span>
+                        <span class="tech-pill">Salesforce</span>
+                        <span class="tech-pill">Zendesk</span>
+                        <span class="tech-pill">HTML / CSS / JS</span>
+                    </div>
+                </div>
+
+                <div class="stack-card">
+                    <div class="stack-card-header">
+                        <span class="stack-index">04 //</span>
+                        <span class="stack-category">Operations &amp; Logistics Platforms</span>
+                    </div>
+                    <div class="pill-grid">
+                        <span class="tech-pill">Onfleet</span>
+                        <span class="tech-pill">Airtable</span>
+                        <span class="tech-pill">Retool</span>
+                        <span class="tech-pill">Trello</span>
+                    </div>
+                </div>
             </div>
 
             <!-- VERIFIED CREDENTIALS MATRIX -->
@@ -305,8 +360,9 @@
         </div>
     </section>
 
-    <!-- TRACKING & SCROLL-TELLING JAVASCRIPT -->
+    <!-- TRACKING, HEATMAP & SCROLL-TELLING JAVASCRIPT -->
     <script>
+        // 1. WEBHOOK TRACKING SYSTEM
         const webhookUrl = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
 
         function sendTrackingData(eventType, elementDetails) {
@@ -330,6 +386,43 @@
             }
         });
 
+        // 2. CAMPAIGN LAB HEATMAP ENGINE
+        const campaignLabData = {
+            AK: 2,  AL: 15, AR: 10, AZ: 20, CA: 112, CO: 37, CT: 8,  DE: 0,  FL: 66, GA: 26,
+            HI: 4,  IA: 9,  ID: 3,  IL: 32, IN: 14,  KS: 10, KY: 7,  LA: 9,  MA: 33, MD: 17,
+            ME: 4,  MI: 34, MN: 32, MO: 28, MS: 4,   MT: 3,  NC: 58, ND: 2,  NE: 12, NH: 3,
+            NJ: 26, NM: 7,  NV: 12, NY: 45, OH: 34,  OK: 6,  OR: 18, PA: 30, RI: 5,  SC: 12,
+            SD: 5,  TN: 21, TX: 115, UT: 3, VA: 28,  VT: 3,  WA: 30, WI: 35, WV: 2,  WY: 0,
+            DC: 0
+        };
+
+        function getHeatTier(val) {
+            if (val === 0) return 'heat-0';
+            if (val <= 10) return 'heat-1';
+            if (val <= 25) return 'heat-2';
+            if (val <= 50) return 'heat-3';
+            return 'heat-4';
+        }
+
+        const heatmapReadout = document.getElementById('heatmap-readout');
+        const defaultReadout = '1,051 Total • Hover a state for count';
+
+        document.querySelectorAll('#campaign-heatmap .state-block').forEach(block => {
+            const st = block.getAttribute('data-state');
+            const val = campaignLabData[st] ?? 0;
+            block.classList.add(getHeatTier(val));
+            block.setAttribute('title', `${st}: ${val}`);
+
+            block.addEventListener('mouseenter', () => {
+                const hqTag = st === 'CO' ? ' (HQ)' : '';
+                heatmapReadout.innerText = `${st}${hqTag}: ${val} Total`;
+            });
+            block.addEventListener('mouseleave', () => {
+                heatmapReadout.innerText = defaultReadout;
+            });
+        });
+
+        // 3. SCROLL-TELLING OBSERVER
         const scrollBlocks = document.querySelectorAll('.scroll-block');
         const visualFrames = document.querySelectorAll('.visual-frame');
 
