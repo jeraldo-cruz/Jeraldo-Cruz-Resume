@@ -364,7 +364,7 @@ body {
     line-height: 1.35;
 }
 
-/* 10. TECHY TERMINAL STACK & CREDENTIALS SECTION */
+/* 10. ARCHITECTURAL STACK & CREDENTIALS SECTION */
 .tech-certs-section {
     background-color: var(--bg-surface);
     border-top: 1px solid var(--border-subtle);
@@ -395,28 +395,72 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Tech Pills */
+/* Categorized Stack Grid */
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.stack-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 26px 28px;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.stack-card:hover {
+    border-color: var(--champagne-gold);
+    transform: translateY(-2px);
+}
+
+.stack-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.stack-index {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--champagne-gold);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.stack-category {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.2px;
+}
+
+/* Refined Tech Pills */
 .pill-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
 }
 
 .tech-pill {
     font-family: var(--font-mono);
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-subtle);
-    padding: 10px 18px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid #2F2F37;
+    padding: 7px 14px;
     border-radius: 4px;
-    font-size: 0.88rem;
-    color: var(--text-primary);
-    transition: all 0.25s ease;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
 }
 
 .tech-pill:hover {
     border-color: var(--champagne-gold);
-    color: var(--champagne-gold);
-    transform: translateY(-2px);
+    color: var(--text-primary);
+    background-color: rgba(184, 151, 94, 0.08);
 }
 
 /* Verified Credential Cards */
@@ -493,5 +537,5 @@ body {
     .sticky-visual { height: 350px; min-height: 350px; margin-bottom: 30px; }
     .text-column { width: 100%; padding-left: 0; }
     .scroll-block { min-height: 55vh; opacity: 1; padding: 20px 0 20px 20px; }
-    .cert-grid { grid-template-columns: 1fr; }
+    .stack-grid, .cert-grid { grid-template-columns: 1fr; }
 }
