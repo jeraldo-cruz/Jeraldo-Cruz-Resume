@@ -8,11 +8,7 @@
     --subtle-border: #EAEAEA;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Roboto, sans-serif;
@@ -22,47 +18,19 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 { 
-    line-height: 1.2; 
-    margin-bottom: 16px; 
-    letter-spacing: -0.5px; 
-}
-
-p { 
-    margin-bottom: 24px; 
-    font-size: 1.15rem; 
-    color: var(--charcoal); 
-    font-weight: 300; 
-}
+h1, h2, h3 { line-height: 1.2; margin-bottom: 16px; letter-spacing: -0.5px; }
+p { margin-bottom: 24px; font-size: 1.15rem; color: var(--charcoal); font-weight: 300; }
 
 /* 2. HERO SECTION */
 .hero-section {
     background-color: var(--pearl-white);
-    padding: 140px 20px;
+    padding: 130px 20px;
     text-align: center;
     border-bottom: 1px solid var(--subtle-border);
 }
-
-.hero-content { 
-    max-width: 800px; 
-    margin: 0 auto; 
-}
-
-.hero-content h1 { 
-    font-size: 3.8rem; 
-    color: var(--obsidian); 
-    letter-spacing: -1.5px; 
-    font-weight: 700; 
-}
-
-.hero-content h2 { 
-    font-size: 1.4rem; 
-    color: var(--champagne-gold); 
-    font-weight: 500; 
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-    margin-bottom: 28px; 
-}
+.hero-content { max-width: 800px; margin: 0 auto; }
+.hero-content h1 { font-size: 3.8rem; color: var(--obsidian); letter-spacing: -1.5px; font-weight: 700; }
+.hero-content h2 { font-size: 1.3rem; color: var(--champagne-gold); font-weight: 500; text-transform: uppercase; letter-spacing: 2.5px; margin-bottom: 28px; }
 
 /* 3. BUTTON STYLING */
 button {
@@ -78,71 +46,119 @@ button {
     transition: all 0.3s ease;
     margin-top: 24px;
 }
-
 button:hover {
     background-color: var(--champagne-gold);
     border-color: var(--champagne-gold);
-    box-shadow: 0 8px 20px rgba(184, 151, 94, 0.2);
+    box-shadow: 0 8px 20px rgba(184, 151, 94, 0.25);
 }
 
-/* 4. SCROLL CONTAINER (The Side-by-Side Layout) */
+/* 4. STICKY SCROLL CONTAINER */
 .scroll-container {
     display: flex;
+    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 20px;
+    padding: 80px 20px 140px;
 }
 
-.visual-column { 
-    width: 50%; 
-    position: relative; 
-}
-
-.text-column { 
-    width: 50%; 
-    padding-left: 80px; 
+.visual-column {
+    width: 50%;
+    position: sticky;
+    top: 15vh;
 }
 
 .sticky-visual {
-    position: sticky;
-    top: 20vh;
-    height: 60vh;
+    position: relative;
+    height: 70vh;
+    min-height: 460px;
+    max-height: 600px;
     background-color: var(--obsidian);
-    color: var(--pure-white);
+    border-radius: 6px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.14);
+    overflow: hidden;
+}
+
+/* 5. VISUAL CROSS-FADE FRAMES */
+.visual-frame {
+    position: absolute;
+    inset: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
-    padding: 40px;
+    padding: 36px;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+    pointer-events: none;
+}
+
+.visual-frame.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.visual-label {
+    margin-top: 28px;
     text-align: center;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+.visual-label h3 {
+    color: var(--champagne-gold);
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+.visual-label span {
+    color: #9A9A9E;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+/* 6. RIGHT COLUMN: SCROLLING TEXT */
+.text-column {
+    width: 50%;
+    padding-left: 80px;
 }
 
 .scroll-block {
-    min-height: 80vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 40px;
+    opacity: 0.25;
+    transition: opacity 0.45s ease;
 }
 
-.scroll-block h3 { 
-    font-size: 2rem; 
-    color: var(--obsidian); 
-    font-weight: 600; 
+.scroll-block.active {
+    opacity: 1;
 }
 
-/* 5. TILE GRID MAP (BLOCK CARTOGRAM) */
+.role-date {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--champagne-gold);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.scroll-block h3 {
+    font-size: 2rem;
+    color: var(--obsidian);
+    font-weight: 600;
+}
+
+/* 7. CAMPAIGN LAB (US TILE GRID MAP) */
 .block-map {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(8, 1fr);
     gap: 4px;
     width: 100%;
-    max-width: 480px;
+    max-width: 420px;
 }
-
 .state-block {
     aspect-ratio: 1 / 1;
     background-color: #222222;
@@ -150,37 +166,66 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.75rem;
+    font-size: 0.68rem;
     font-weight: 600;
     border-radius: 3px;
-    transition: all 0.4s ease;
 }
-
 .state-block.highlight {
     background-color: var(--champagne-gold);
     color: var(--obsidian);
-    box-shadow: 0 0 10px rgba(184, 151, 94, 0.4);
+}
+.state-block.hq {
+    background-color: var(--pure-white);
+    color: var(--obsidian);
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.85);
+    transform: scale(1.18);
+    z-index: 2;
 }
 
-/* 6. MOBILE RESPONSIVENESS */
+/* 8. CUSTOM SVGS (AMUSE HUB-AND-SPOKE & APPLE GLOBE) */
+.custom-svg {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+}
+
+/* 9. FOUNDATION METRICS GRID (TWC & WALMART) */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+    max-width: 380px;
+}
+.metric-card {
+    background-color: #1A1A1C;
+    border: 1px solid #2E2E30;
+    border-radius: 4px;
+    padding: 22px 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.metric-num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--champagne-gold);
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+.metric-desc {
+    font-size: 0.8rem;
+    color: #CCCCCC;
+    font-weight: 300;
+    line-height: 1.35;
+}
+
+/* 10. MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
-    .scroll-container { 
-        flex-direction: column; 
-        padding: 60px 20px; 
-    }
-    .visual-column, .text-column { 
-        width: 100%; 
-        padding: 0; 
-    }
-    .sticky-visual { 
-        position: relative; 
-        top: 0; 
-        height: auto; 
-        padding: 40px 20px; 
-        margin-bottom: 50px; 
-    }
-    .scroll-block { 
-        min-height: auto; 
-        margin-bottom: 80px; 
-    }
+    .scroll-container { flex-direction: column; padding: 40px 20px; }
+    .visual-column { width: 100%; position: sticky; top: 12px; z-index: 10; }
+    .sticky-visual { height: 340px; min-height: 340px; margin-bottom: 30px; }
+    .text-column { width: 100%; padding-left: 0; }
+    .scroll-block { min-height: 55vh; opacity: 1; padding: 20px 0; }
 }
