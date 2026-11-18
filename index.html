@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeraldo Cruz | Technical Operations & Systems Architect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Jeraldo Cruz</h1>
+            <h2>Technical Operations Leader & Systems Architect</h2>
+            <p>Bridging complex technical infrastructure with daily business operations. Scaling distributed teams, engineering automated workflows, and driving data-backed cost reductions across global environments.</p>
+            
+            <!-- TRACKED BUTTON: The 'track-click' class triggers the webhook below -->
+            <button class="track-click" id="download-resume">Download ATS Resume</button>
+        </div>
+    </header>
+
+    <!-- STICKY SCROLL SECTION (OPERATIONS GRID) -->
+    <main>
+        <section class="scroll-container">
+            
+            <!-- Left Side: The Sticky Visual -->
+            <div class="visual-column">
+                <div class="sticky-visual" id="dynamic-graphic">
+                    <h2>Global Infrastructure</h2>
+                </div>
+            </div>
+
+            <!-- Right Side: The Scrolling Text -->
+            <div class="text-column">
+                
+                <!-- Block 1: Apple -->
+                <div class="scroll-block" data-visual="global">
+                    <h3>Global Network Operations | Apple</h3>
+                    <p>Supported enterprise infrastructure and security compliance for 64,000+ employees across 130+ global sites. Designed triage guides and case management processes that saved $2 million in operational costs annually and reduced technical escalations by 25%.</p>
+                </div>
+
+                <!-- Block 2: Amuse -->
+                <div class="scroll-block" data-visual="regional">
+                    <h3>Regional Logistics | Amuse</h3>
+                    <p>Engineered supply chain and last-mile delivery logistics, scaling physical operations from 1 to 6 high-volume cities. Achieved a 35% reduction in delivery costs and a 40% reduction in potential financial losses through rigorous risk mitigation and IAM governance for 300+ employees.</p>
+                </div>
+
+                <!-- Block 3: Campaign Lab & Hoopocalypse -->
+                <div class="scroll-block" data-visual="digital">
+                    <h3>Digital Architecture | The Campaign Lab</h3>
+                    <p>Architected automated CRM pipelines and e-commerce supply chains. Executed 15,600+ targeted digital touchpoints across North America and the UK, utilizing Python scripts and AI-assisted workflows to eliminate manual operational bottlenecks.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- TRACKING & SCROLL JAVASCRIPT -->
+    <script>
+        // 1. WEBHOOK TRACKING SYSTEM
+        const webhookUrl = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE'; // Replace with your actual Webhook URL later
+
+        function sendTrackingData(eventType, elementDetails) {
+            fetch(webhookUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    eventType: eventType,
+                    element: elementDetails,
+                    page: window.location.pathname
+                })
+            });
+        }
+
+        // Listen for clicks on anything with the 'track-click' class
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.track-click')) {
+                let buttonName = e.target.innerText || 'Unnamed Button';
+                sendTrackingData('Click', buttonName);
+            }
+        });
+
+        // 2. STICKY SCROLL OBSERVER
+        const dynamicGraphic = document.getElementById('dynamic-graphic');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const visualState = entry.target.getAttribute('data-visual');
+                    
+                    if (visualState === 'global') {
+                        dynamicGraphic.innerHTML = '<h2>Global Scale<br><span style="font-size: 1.2rem; font-weight: 300; color: var(--pearl-white);">(130+ Sites)</span></h2>';
+                    } else if (visualState === 'regional') {
+                        dynamicGraphic.innerHTML = '<h2>Regional Scaling<br><span style="font-size: 1.2rem; font-weight: 300; color: var(--pearl-white);">(6 Hubs)</span></h2>';
+                    } else if (visualState === 'digital') {
+                        dynamicGraphic.innerHTML = '<h2>CRM Pipeline<br><span style="font-size: 1.2rem; font-weight: 300; color: var(--pearl-white);">(15k+ Endpoints)</span></h2>';
+                    }
+                    
+                    // Track that the recruiter reached this section
+                    sendTrackingData('Scroll', 'Viewed: ' + visualState);
+                }
+            });
+        }, { threshold: 0.5 }); // Triggers when 50% of the text block is in view
+
+        document.querySelectorAll('.scroll-block').forEach(block => {
+            observer.observe(block);
+        });
+    </script>
+</body>
+</html>
