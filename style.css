@@ -83,7 +83,7 @@ body {
     color: var(--text-secondary);
     text-decoration: none;
     font-size: 0.9rem;
-    font-family: var(--font-mono);
+    letter-spacing: 0.4px;
     transition: color 0.2s ease;
 }
 
@@ -104,10 +104,10 @@ body {
 }
 
 .hero-eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--champagne-gold);
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
+    font-weight: 600;
     margin-bottom: 18px;
 }
 
@@ -149,7 +149,7 @@ body {
     max-height: 620px;
     background-color: var(--bg-surface);
     border: 1px solid var(--border-subtle);
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
     overflow: hidden;
 }
@@ -189,7 +189,6 @@ body {
 .visual-label span {
     color: var(--text-secondary);
     font-size: 0.88rem;
-    font-family: var(--font-mono);
 }
 
 /* 6. RIGHT COLUMN: MATCHED-BACKGROUND SCROLLING TILES */
@@ -215,11 +214,11 @@ body {
 }
 
 .role-date {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.8px;
     color: var(--champagne-gold);
+    font-weight: 600;
     margin-bottom: 12px;
 }
 
@@ -267,56 +266,25 @@ body {
 }
 
 /* 5-Tier Champagne Gold Heat Scale */
-.heat-0 {
-    background-color: #1D1D22;
-    color: #4D4D56;
-}
-.heat-1 {
-    background-color: rgba(184, 151, 94, 0.22);
-    color: #CBB282;
-}
-.heat-2 {
-    background-color: rgba(184, 151, 94, 0.48);
-    color: #F5F5F7;
-}
-.heat-3 {
-    background-color: rgba(184, 151, 94, 0.78);
-    color: #111111;
-}
-.heat-4 {
-    background-color: #D8B46C;
-    color: #111111;
-    box-shadow: 0 0 12px rgba(216, 180, 108, 0.45);
-}
+.heat-0 { background-color: #1D1D22; color: #4D4D56; }
+.heat-1 { background-color: rgba(184, 151, 94, 0.22); color: #CBB282; }
+.heat-2 { background-color: rgba(184, 151, 94, 0.48); color: #F5F5F7; }
+.heat-3 { background-color: rgba(184, 151, 94, 0.78); color: #111111; }
+.heat-4 { background-color: #D8B46C; color: #111111; box-shadow: 0 0 12px rgba(216, 180, 108, 0.45); }
 
-/* Colorado HQ Highlight Ring */
-.state-block.hq {
-    border: 2px solid #FFFFFF;
-    z-index: 3;
-}
+.state-block.hq { border: 2px solid #FFFFFF; z-index: 3; }
 
-/* Heatmap Legend */
 .heatmap-legend {
     display: flex;
     align-items: center;
     gap: 6px;
     margin-top: 18px;
-    font-family: var(--font-mono);
     font-size: 0.72rem;
     color: var(--text-secondary);
 }
 
-.legend-swatch {
-    width: 14px;
-    height: 14px;
-    border-radius: 2px;
-}
-
-.legend-sep {
-    margin: 0 6px;
-    color: var(--border-subtle);
-}
-
+.legend-swatch { width: 14px; height: 14px; border-radius: 2px; }
+.legend-sep { margin: 0 6px; color: var(--border-subtle); }
 .legend-hq-box {
     width: 14px;
     height: 14px;
@@ -335,51 +303,23 @@ body {
     max-width: 440px;
 }
 
-.ca-route-map {
-    width: 52%;
-    display: flex;
-    justify-content: center;
-}
+.ca-route-map { width: 52%; display: flex; justify-content: center; }
+.ca-route-map svg { width: 100%; max-width: 210px; height: auto; }
 
-.ca-route-map svg {
-    width: 100%;
-    max-width: 210px;
-    height: auto;
-}
-
-@keyframes routeFlow {
-    to {
-        stroke-dashoffset: -18;
-    }
-}
-
-.route-flow {
-    animation: routeFlow 1.4s linear infinite;
-}
+@keyframes routeFlow { to { stroke-dashoffset: -18; } }
+.route-flow { animation: routeFlow 1.4s linear infinite; }
 
 @keyframes hubPulse {
-    0% {
-        opacity: 0.75;
-        transform: scale(0.85);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(1.65);
-    }
+    0% { opacity: 0.75; transform: scale(0.85); }
+    100% { opacity: 0; transform: scale(1.65); }
 }
-
 .hub-pulse {
     transform-box: fill-box;
     transform-origin: center;
     animation: hubPulse 2.4s ease-out infinite;
 }
 
-.telemetry-stack {
-    width: 48%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
+.telemetry-stack { width: 48%; display: flex; flex-direction: column; gap: 12px; }
 
 .telemetry-header {
     display: flex;
@@ -390,6 +330,14 @@ body {
     color: var(--emerald);
     letter-spacing: 1px;
     margin-bottom: 2px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--emerald);
+    box-shadow: 0 0 8px var(--emerald);
 }
 
 .telemetry-card {
@@ -419,11 +367,7 @@ body {
 }
 
 /* 9. CUSTOM SVGS (APPLE GLOBE) */
-.custom-svg {
-    width: 100%;
-    max-width: 360px;
-    height: auto;
-}
+.custom-svg { width: 100%; max-width: 360px; height: auto; }
 
 /* 10. FOUNDATION METRICS GRID */
 .metrics-grid {
@@ -444,7 +388,6 @@ body {
     justify-content: center;
 }
 .metric-num {
-    font-family: var(--font-mono);
     font-size: 1.9rem;
     font-weight: 700;
     color: var(--champagne-gold);
@@ -457,168 +400,166 @@ body {
     line-height: 1.35;
 }
 
-/* 11. ARCHITECTURAL STACK & CREDENTIALS SECTION */
-.tech-certs-section {
+/* 11. ASYMMETRIC BENTO SHOWCASE */
+.bento-section {
     background-color: var(--bg-surface);
     border-top: 1px solid var(--border-subtle);
-    padding: 100px 24px 120px;
+    padding: 110px 24px 130px;
 }
 
-.tech-certs-container {
+.bento-container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.terminal-header {
-    font-family: var(--font-mono);
-    font-size: 1.05rem;
-    margin-bottom: 28px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.bento-intro {
+    margin-bottom: 48px;
 }
 
-.terminal-prompt {
+.bento-eyebrow {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 2.2px;
     color: var(--champagne-gold);
+    margin-bottom: 10px;
+}
+
+.bento-intro h2 {
+    font-size: 2.4rem;
     font-weight: 700;
-}
-
-.terminal-cmd {
+    letter-spacing: -0.8px;
     color: var(--text-primary);
-    letter-spacing: 0.5px;
 }
 
-/* Categorized Stack Grid */
-.stack-grid {
+.bento-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 22px;
 }
 
-.stack-card {
+.bento-card {
+    position: relative;
     background-color: var(--bg-card);
     border: 1px solid var(--border-subtle);
-    border-radius: 6px;
-    padding: 26px 28px;
-    transition: border-color 0.25s ease, transform 0.25s ease;
-}
-
-.stack-card:hover {
-    border-color: var(--champagne-gold);
-    transform: translateY(-2px);
-}
-
-.stack-card-header {
+    border-radius: 16px;
+    padding: 36px;
     display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid var(--border-subtle);
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.stack-index {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    color: var(--champagne-gold);
-    font-weight: 600;
-    letter-spacing: 1px;
+.bento-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(184, 151, 94, 0.55);
+    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.35);
 }
 
-.stack-category {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    letter-spacing: 0.2px;
+.bento-wide { grid-column: span 7; }
+.bento-narrow { grid-column: span 5; }
+
+/* Subtle Luxury Gold Radial Glow on Focal Tile */
+.bento-glow::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 240px;
+    height: 240px;
+    background: radial-gradient(circle, rgba(184, 151, 94, 0.16) 0%, rgba(184, 151, 94, 0) 70%);
+    pointer-events: none;
 }
 
-/* Refined Tech Pills */
-.pill-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.tech-pill {
-    font-family: var(--font-mono);
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid #2F2F37;
-    padding: 7px 14px;
-    border-radius: 4px;
-    font-size: 0.82rem;
-    color: var(--text-secondary);
-    transition: all 0.2s ease;
-}
-
-.tech-pill:hover {
-    border-color: var(--champagne-gold);
-    color: var(--text-primary);
-    background-color: rgba(184, 151, 94, 0.08);
-}
-
-/* Verified Credential Cards */
-.cert-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.cert-card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-subtle);
-    border-radius: 6px;
-    padding: 28px;
-    transition: border-color 0.25s ease, transform 0.25s ease;
-}
-
-.cert-card:hover {
-    border-color: var(--champagne-gold);
-    transform: translateY(-3px);
-}
-
-.cert-card-top {
+.bento-meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-}
-
-.cert-issuer {
-    color: var(--champagne-gold);
+    margin-bottom: 24px;
+    font-size: 0.72rem;
     letter-spacing: 1.5px;
     font-weight: 600;
 }
 
-.cert-status {
-    color: var(--emerald);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    letter-spacing: 1px;
+.bento-tag { color: var(--champagne-gold); }
+.bento-inst { color: var(--text-secondary); }
+
+.bento-big-stat {
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -2px;
+    background: linear-gradient(135deg, #FFFFFF 20%, #B8975E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 14px;
 }
 
-.status-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background-color: var(--emerald);
-    box-shadow: 0 0 8px var(--emerald);
-}
-
-.cert-card h4 {
-    font-size: 1.25rem;
-    color: var(--text-primary);
+.bento-card h3 {
+    font-size: 1.55rem;
     font-weight: 600;
-    margin-bottom: 10px;
+    color: var(--text-primary);
+    letter-spacing: -0.4px;
+    margin-bottom: 12px;
 }
 
-.cert-card p {
-    font-size: 0.95rem;
+.bento-card p {
+    font-size: 1rem;
     color: var(--text-secondary);
     font-weight: 300;
-    line-height: 1.55;
+    line-height: 1.65;
+    margin-bottom: 28px;
+}
+
+.bento-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.bento-list span {
+    font-size: 0.92rem;
+    color: var(--text-primary);
+    font-weight: 400;
+    padding-left: 14px;
+    position: relative;
+}
+
+.bento-list span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--champagne-gold);
+}
+
+.bento-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.bento-chips span {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 400;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.bento-chips span:hover {
+    border-color: var(--champagne-gold);
+    color: var(--champagne-gold);
 }
 
 /* 12. MOBILE RESPONSIVENESS */
@@ -634,5 +575,7 @@ body {
     .ca-route-map svg { max-width: 145px; }
     .telemetry-card { padding: 8px 10px; }
     .telemetry-val { font-size: 1.15rem; }
-    .stack-grid, .cert-grid { grid-template-columns: 1fr; }
+    .bento-intro h2 { font-size: 1.85rem; }
+    .bento-wide, .bento-narrow { grid-column: span 12; }
+    .bento-card { padding: 28px; }
 }
