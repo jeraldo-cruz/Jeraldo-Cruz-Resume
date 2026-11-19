@@ -123,36 +123,71 @@
                         </div>
                     </div>
 
-                    <!-- FRAME 2: AMUSE (HUB-AND-SPOKE "WAGON WHEEL" SVG) -->
+                    <!-- FRAME 2: AMUSE (HYBRID CALIFORNIA ROUTE MAP + LIVE KPI TELEMETRY) -->
                     <div class="visual-frame" id="vis-amuse">
-                        <svg class="custom-svg" viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="180" cy="160" r="112" fill="none" stroke="#2C2C2E" stroke-width="1.5" stroke-dasharray="4 6"/>
-                            <circle cx="180" cy="160" r="68" fill="none" stroke="#222222" stroke-width="1"/>
-                            
-                            <line x1="180" y1="160" x2="180" y2="48" stroke="#B8975E" stroke-width="1.5" opacity="0.7"/>
-                            <line x1="180" y1="160" x2="286" y2="125" stroke="#B8975E" stroke-width="1.5" opacity="0.7"/>
-                            <line x1="180" y1="160" x2="246" y2="250" stroke="#B8975E" stroke-width="1.5" opacity="0.7"/>
-                            <line x1="180" y1="160" x2="114" y2="250" stroke="#B8975E" stroke-width="1.5" opacity="0.7"/>
-                            <line x1="180" y1="160" x2="74" y2="125" stroke="#B8975E" stroke-width="1.5" opacity="0.7"/>
+                        <div class="amuse-hybrid">
+                            <!-- Left: California Silhouette & Animated Corridors -->
+                            <div class="ca-route-map">
+                                <svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Minimalist California Silhouette -->
+                                    <path d="M 38 15 L 100 15 L 100 98 L 172 195 L 166 248 L 118 255 L 110 228 L 96 208 L 62 192 L 54 152 L 46 118 L 30 72 Z"
+                                          fill="#1A1A1F" stroke="#32323A" stroke-width="1.5" stroke-linejoin="round"/>
 
-                            <circle cx="180" cy="48" r="24" fill="#141417" stroke="#B8975E" stroke-width="2"/>
-                            <text x="180" y="52" text-anchor="middle" fill="#FAFAFA" font-size="11" font-weight="600">SAC</text>
-                            <circle cx="74" cy="125" r="24" fill="#141417" stroke="#B8975E" stroke-width="2"/>
-                            <text x="74" y="129" text-anchor="middle" fill="#FAFAFA" font-size="11" font-weight="600">SF</text>
-                            <circle cx="286" cy="125" r="24" fill="#141417" stroke="#B8975E" stroke-width="2"/>
-                            <text x="286" y="129" text-anchor="middle" fill="#FAFAFA" font-size="11" font-weight="600">LA</text>
-                            <circle cx="246" cy="250" r="24" fill="#141417" stroke="#B8975E" stroke-width="2"/>
-                            <text x="246" y="254" text-anchor="middle" fill="#FAFAFA" font-size="11" font-weight="600">OC</text>
-                            <circle cx="114" cy="250" r="24" fill="#141417" stroke="#B8975E" stroke-width="2"/>
-                            <text x="114" y="254" text-anchor="middle" fill="#FAFAFA" font-size="11" font-weight="600">SD</text>
+                                    <!-- Animated I-5 & Hwy 101 Dispatch Corridors -->
+                                    <path class="route-flow" d="M 74 108 L 52 122" fill="none" stroke="#B8975E" stroke-width="1.5" stroke-dasharray="4 4"/>
+                                    <path class="route-flow" d="M 74 108 Q 92 158 105 206" fill="none" stroke="#B8975E" stroke-width="1.8" stroke-dasharray="5 5"/>
+                                    <path class="route-flow" d="M 52 122 Q 66 172 105 206" fill="none" stroke="#B8975E" stroke-width="1.2" stroke-dasharray="4 5" opacity="0.65"/>
+                                    <path class="route-flow" d="M 105 206 L 118 224 L 128 246" fill="none" stroke="#B8975E" stroke-width="1.8" stroke-dasharray="4 4"/>
 
-                            <circle cx="180" cy="160" r="40" fill="#B8975E"/>
-                            <text x="180" y="157" text-anchor="middle" fill="#111111" font-size="10" font-weight="700" letter-spacing="1">CENTRAL</text>
-                            <text x="180" y="171" text-anchor="middle" fill="#111111" font-size="10" font-weight="700" letter-spacing="1">OPS HQ</text>
-                        </svg>
+                                    <!-- Pulsing Hub Rings -->
+                                    <circle class="hub-pulse" cx="74" cy="108" r="10" fill="none" stroke="#B8975E" stroke-width="1"/>
+                                    <circle class="hub-pulse" cx="52" cy="122" r="10" fill="none" stroke="#B8975E" stroke-width="1"/>
+                                    <circle class="hub-pulse" cx="105" cy="206" r="12" fill="none" stroke="#B8975E" stroke-width="1"/>
+                                    <circle class="hub-pulse" cx="118" cy="224" r="9" fill="none" stroke="#B8975E" stroke-width="1"/>
+                                    <circle class="hub-pulse" cx="128" cy="246" r="10" fill="none" stroke="#B8975E" stroke-width="1"/>
+
+                                    <!-- Hub Nodes -->
+                                    <circle cx="74" cy="108" r="4.5" fill="#B8975E"/>
+                                    <text x="84" y="111" fill="#F5F5F7" font-family="monospace" font-size="10" font-weight="700">SAC</text>
+
+                                    <circle cx="52" cy="122" r="4.5" fill="#B8975E"/>
+                                    <text x="26" y="125" fill="#F5F5F7" font-family="monospace" font-size="10" font-weight="700">SF</text>
+
+                                    <circle cx="105" cy="206" r="5.5" fill="#FFFFFF" stroke="#B8975E" stroke-width="2"/>
+                                    <text x="116" y="206" fill="#B8975E" font-family="monospace" font-size="10" font-weight="700">LA</text>
+
+                                    <circle cx="118" cy="224" r="4" fill="#B8975E"/>
+                                    <text x="129" y="227" fill="#F5F5F7" font-family="monospace" font-size="10" font-weight="700">OC</text>
+
+                                    <circle cx="128" cy="246" r="4.5" fill="#B8975E"/>
+                                    <text x="139" y="249" fill="#F5F5F7" font-family="monospace" font-size="10" font-weight="700">SD</text>
+                                </svg>
+                            </div>
+
+                            <!-- Right: Live KPI Telemetry Stack -->
+                            <div class="telemetry-stack">
+                                <div class="telemetry-header">
+                                    <span class="status-dot"></span>
+                                    <span>CA_NETWORK_KPI</span>
+                                </div>
+                                <div class="telemetry-card">
+                                    <span class="telemetry-val">-35%</span>
+                                    <span class="telemetry-label">DELIVERY COST</span>
+                                </div>
+                                <div class="telemetry-card">
+                                    <span class="telemetry-val">-40%</span>
+                                    <span class="telemetry-label">RISK MITIGATION</span>
+                                </div>
+                                <div class="telemetry-card">
+                                    <span class="telemetry-val">300+</span>
+                                    <span class="telemetry-label">IAM USERS GOVERNED</span>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="visual-label">
-                            <h3>Hub-and-Spoke Logistics</h3>
-                            <span>California Scaling &bull; -35% Delivery Costs</span>
+                            <h3>California Logistics Network</h3>
+                            <span>5 Active Hubs &bull; Last-Mile Dispatch &amp; IAM</span>
                         </div>
                     </div>
 
