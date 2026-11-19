@@ -324,14 +324,8 @@ body {
     background-color: var(--champagne-gold);
 }
 
-.impact-list.compact {
-    gap: 8px;
-}
-
-.impact-list.compact li {
-    font-size: 0.94rem;
-    line-height: 1.55;
-}
+.impact-list.compact { gap: 8px; }
+.impact-list.compact li { font-size: 0.94rem; line-height: 1.55; }
 
 /* Concurrent Venture Callout (Hoopocalypse) */
 .venture-callout {
@@ -376,9 +370,7 @@ body {
     gap: 28px;
 }
 
-.timeline-item {
-    position: relative;
-}
+.timeline-item { position: relative; }
 
 .timeline-item::before {
     content: "";
@@ -437,7 +429,6 @@ body {
     box-shadow: 0 0 14px rgba(184, 151, 94, 0.7);
 }
 
-/* 5-Tier Champagne Gold Heat Scale */
 .heat-0 { background-color: #1D1D22; color: #4D4D56; }
 .heat-1 { background-color: rgba(184, 151, 94, 0.22); color: #CBB282; }
 .heat-2 { background-color: rgba(184, 151, 94, 0.48); color: #F5F5F7; }
@@ -585,9 +576,7 @@ body {
     margin: 0 auto;
 }
 
-.bento-intro {
-    margin-bottom: 48px;
-}
+.bento-intro { margin-bottom: 48px; }
 
 .bento-eyebrow {
     display: block;
@@ -734,7 +723,132 @@ body {
     color: var(--champagne-gold);
 }
 
-/* 12. LUXURY CONTACT & CONVERSION FOOTER */
+/* 12. INTERACTIVE 14-CERTIFICATION DIRECTORY */
+.certs-directory {
+    margin-top: 84px;
+    padding-top: 64px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.certs-dir-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 36px;
+}
+
+.certs-dir-header h3 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+}
+
+.cert-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    background-color: var(--bg-card);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-subtle);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--champagne-gold);
+    color: var(--text-primary);
+}
+
+.filter-btn.active {
+    background-color: var(--champagne-gold);
+    border-color: var(--champagne-gold);
+    color: #111111;
+    font-weight: 600;
+}
+
+.certs-accordion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    align-items: start;
+}
+
+.cert-accordion {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 20px 24px;
+    transition: border-color 0.25s ease;
+}
+
+.cert-accordion:hover,
+.cert-accordion[open] {
+    border-color: rgba(184, 151, 94, 0.55);
+}
+
+.cert-accordion summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.cert-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.cert-badge {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 1.4px;
+    color: var(--champagne-gold);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.cert-accordion h4 {
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.35;
+}
+
+.cert-toggle {
+    font-size: 1.35rem;
+    font-weight: 300;
+    color: var(--champagne-gold);
+    line-height: 1;
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+}
+
+.cert-accordion[open] .cert-toggle {
+    transform: rotate(45deg);
+}
+
+.cert-accordion p {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-subtle);
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* 13. LUXURY CONTACT & CONVERSION FOOTER */
 .contact-footer {
     background-color: var(--bg-main);
     border-top: 1px solid var(--border-subtle);
@@ -828,7 +942,7 @@ body {
     text-align: center;
 }
 
-/* 13. MOBILE RESPONSIVENESS */
+/* 14. MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
     .nav-divider, .nav-title { display: none; }
     .nav-links { gap: 16px; }
@@ -846,6 +960,7 @@ body {
     .bento-intro h2 { font-size: 1.85rem; }
     .bento-wide, .bento-narrow { grid-column: span 12; }
     .bento-card { padding: 28px; }
+    .certs-accordion-grid { grid-template-columns: 1fr; }
     .footer-container { grid-template-columns: 1fr; gap: 40px; }
     .footer-left h2 { font-size: 1.9rem; }
 }
