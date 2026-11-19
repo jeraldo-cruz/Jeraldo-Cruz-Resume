@@ -137,7 +137,7 @@ body {
 }
 
 .visual-column {
-    width: 50%;
+    width: 48%;
     position: sticky;
     top: 100px;
 }
@@ -193,18 +193,19 @@ body {
 
 /* 6. RIGHT COLUMN: MATCHED-BACKGROUND SCROLLING TILES */
 .text-column {
-    width: 50%;
-    padding-left: 72px;
+    width: 52%;
+    padding-left: 64px;
 }
 
 .scroll-block {
-    min-height: 80vh;
+    min-height: 82vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 32px 0 32px 32px;
+    padding: 40px 0 40px 32px;
+    margin-bottom: 36px;
     border-left: 2px solid var(--border-subtle);
-    opacity: 0.25;
+    opacity: 0.28;
     transition: opacity 0.45s ease, border-color 0.45s ease;
 }
 
@@ -219,22 +220,148 @@ body {
     letter-spacing: 1.8px;
     color: var(--champagne-gold);
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .scroll-block h3 {
-    font-size: 1.9rem;
+    font-size: 2rem;
     color: var(--text-primary);
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-bottom: 4px;
     letter-spacing: -0.5px;
 }
 
+.role-subtitle {
+    font-size: 1.05rem;
+    color: var(--champagne-gold);
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
 .scroll-block p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--text-secondary);
     font-weight: 300;
-    line-height: 1.7;
+    line-height: 1.65;
+    margin-bottom: 18px;
+}
+
+.scroll-block strong {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Structured Impact Bullets */
+.impact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.impact-list li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.impact-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--champagne-gold);
+}
+
+.impact-list.compact {
+    gap: 8px;
+}
+
+.impact-list.compact li {
+    font-size: 0.94rem;
+    line-height: 1.55;
+}
+
+/* Concurrent Venture Callout (Hoopocalypse) */
+.venture-callout {
+    margin-top: 28px;
+    padding: 20px 22px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-left: 2px solid var(--champagne-gold);
+    border-radius: 6px;
+}
+
+.venture-tag {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    color: var(--champagne-gold);
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.venture-callout h4 {
+    font-size: 1.02rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.venture-callout p {
+    font-size: 0.92rem;
+    margin-bottom: 0;
+    line-height: 1.55;
+}
+
+/* Nested Apple Career Progression Timeline */
+.apple-timeline {
+    position: relative;
+    margin-top: 10px;
+    padding-left: 22px;
+    border-left: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 6px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--bg-main);
+    border: 2px solid var(--champagne-gold);
+}
+
+.timeline-date {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--champagne-gold);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.timeline-item h4 {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 /* 7. CAMPAIGN LAB (US HEATMAP TILE GRID) */
@@ -460,7 +587,6 @@ body {
 .bento-wide { grid-column: span 7; }
 .bento-narrow { grid-column: span 5; }
 
-/* Subtle Luxury Gold Radial Glow on Focal Tile */
 .bento-glow::before {
     content: "";
     position: absolute;
@@ -570,7 +696,7 @@ body {
     .visual-column { width: 100%; position: sticky; top: 64px; z-index: 10; }
     .sticky-visual { height: 350px; min-height: 350px; margin-bottom: 30px; }
     .text-column { width: 100%; padding-left: 0; }
-    .scroll-block { min-height: 55vh; opacity: 1; padding: 20px 0 20px 20px; }
+    .scroll-block { min-height: auto; opacity: 1; padding: 24px 0 24px 20px; margin-bottom: 48px; }
     .amuse-hybrid { gap: 14px; }
     .ca-route-map svg { max-width: 145px; }
     .telemetry-card { padding: 8px 10px; }
