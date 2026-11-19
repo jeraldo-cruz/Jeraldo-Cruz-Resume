@@ -325,14 +325,107 @@ body {
     background-color: rgba(184, 151, 94, 0.78);
 }
 
-/* 8. CUSTOM SVGS */
+/* 8. AMUSE HYBRID MAP + TELEMETRY */
+.amuse-hybrid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 440px;
+}
+
+.ca-route-map {
+    width: 52%;
+    display: flex;
+    justify-content: center;
+}
+
+.ca-route-map svg {
+    width: 100%;
+    max-width: 210px;
+    height: auto;
+}
+
+@keyframes routeFlow {
+    to {
+        stroke-dashoffset: -18;
+    }
+}
+
+.route-flow {
+    animation: routeFlow 1.4s linear infinite;
+}
+
+@keyframes hubPulse {
+    0% {
+        opacity: 0.75;
+        transform: scale(0.85);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.65);
+    }
+}
+
+.hub-pulse {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: hubPulse 2.4s ease-out infinite;
+}
+
+.telemetry-stack {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.telemetry-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--emerald);
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+.telemetry-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-left: 2px solid var(--champagne-gold);
+    border-radius: 4px;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.telemetry-val {
+    font-family: var(--font-mono);
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.15;
+}
+
+.telemetry-label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--champagne-gold);
+    letter-spacing: 0.8px;
+    margin-top: 4px;
+}
+
+/* 9. CUSTOM SVGS (APPLE GLOBE) */
 .custom-svg {
     width: 100%;
     max-width: 360px;
     height: auto;
 }
 
-/* 9. FOUNDATION METRICS GRID */
+/* 10. FOUNDATION METRICS GRID */
 .metrics-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -364,7 +457,7 @@ body {
     line-height: 1.35;
 }
 
-/* 10. ARCHITECTURAL STACK & CREDENTIALS SECTION */
+/* 11. ARCHITECTURAL STACK & CREDENTIALS SECTION */
 .tech-certs-section {
     background-color: var(--bg-surface);
     border-top: 1px solid var(--border-subtle);
@@ -528,7 +621,7 @@ body {
     line-height: 1.55;
 }
 
-/* 11. MOBILE RESPONSIVENESS */
+/* 12. MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
     .nav-divider, .nav-title { display: none; }
     .hero-content h1 { font-size: 2.2rem; }
@@ -537,5 +630,9 @@ body {
     .sticky-visual { height: 350px; min-height: 350px; margin-bottom: 30px; }
     .text-column { width: 100%; padding-left: 0; }
     .scroll-block { min-height: 55vh; opacity: 1; padding: 20px 0 20px 20px; }
+    .amuse-hybrid { gap: 14px; }
+    .ca-route-map svg { max-width: 145px; }
+    .telemetry-card { padding: 8px 10px; }
+    .telemetry-val { font-size: 1.15rem; }
     .stack-grid, .cert-grid { grid-template-columns: 1fr; }
 }
