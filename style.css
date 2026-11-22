@@ -327,38 +327,6 @@ body {
 .impact-list.compact { gap: 8px; }
 .impact-list.compact li { font-size: 0.94rem; line-height: 1.55; }
 
-/* Concurrent Venture Callout (Hoopocalypse) */
-.venture-callout {
-    margin-top: 28px;
-    padding: 20px 22px;
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-subtle);
-    border-left: 2px solid var(--champagne-gold);
-    border-radius: 6px;
-}
-
-.venture-tag {
-    display: block;
-    font-size: 0.7rem;
-    letter-spacing: 1.5px;
-    color: var(--champagne-gold);
-    font-weight: 600;
-    margin-bottom: 6px;
-}
-
-.venture-callout h3 {
-    font-size: 1.02rem;
-    color: var(--text-primary);
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
-.venture-callout p {
-    font-size: 0.92rem;
-    margin-bottom: 0;
-    line-height: 1.55;
-}
-
 /* Nested Apple Career Progression Timeline */
 .apple-timeline {
     position: relative;
@@ -456,7 +424,69 @@ body {
     background-color: rgba(184, 151, 94, 0.78);
 }
 
-/* 8. AMUSE HYBRID MAP + TELEMETRY */
+/* 8. SIMPLE BIZ SYSTEMS LOCAL HUB VISUAL */
+.local-hub-visual {
+    width: 100%;
+    max-width: 390px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.local-hub-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--emerald);
+    letter-spacing: 1.2px;
+}
+
+.local-modules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.local-module {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-top: 2px solid var(--champagne-gold);
+    border-radius: 6px;
+    padding: 18px 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.module-tag {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 1.2px;
+    color: var(--champagne-gold);
+}
+
+.local-module strong {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.local-url-bar {
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-subtle);
+    border-radius: 999px;
+    padding: 7px 14px;
+}
+
+/* 9. AMUSE HYBRID MAP + TELEMETRY */
 .amuse-hybrid {
     display: flex;
     align-items: center;
@@ -530,10 +560,10 @@ body {
     margin-top: 4px;
 }
 
-/* 9. CUSTOM SVGS (APPLE GLOBE) */
+/* 10. CUSTOM SVGS (HOOPOCALYPSE & APPLE GLOBE) */
 .custom-svg { width: 100%; max-width: 360px; height: auto; }
 
-/* 10. FOUNDATION METRICS GRID */
+/* 11. FOUNDATION METRICS GRID */
 .metrics-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -564,7 +594,7 @@ body {
     line-height: 1.35;
 }
 
-/* 11. ASYMMETRIC BENTO SHOWCASE */
+/* 12. ASYMMETRIC BENTO SHOWCASE */
 .bento-section {
     background-color: var(--bg-surface);
     border-top: 1px solid var(--border-subtle);
@@ -723,7 +753,7 @@ body {
     color: var(--champagne-gold);
 }
 
-/* 12. INTERACTIVE 14-CERTIFICATION DIRECTORY */
+/* 13. INTERACTIVE 14-CERTIFICATION DIRECTORY */
 .certs-directory {
     margin-top: 84px;
     padding-top: 64px;
@@ -848,7 +878,7 @@ body {
     line-height: 1.6;
 }
 
-/* 13. DUAL-PURPOSE ENGAGEMENT & CONTACT FOOTER */
+/* 14. DUAL-PURPOSE ENGAGEMENT & CONTACT FOOTER */
 .contact-footer {
     background-color: var(--bg-main);
     border-top: 1px solid var(--border-subtle);
@@ -1006,7 +1036,7 @@ body {
     text-align: center;
 }
 
-/* 14. MOBILE RESPONSIVENESS */
+/* 15. MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
     .nav-divider, .nav-title { display: none; }
     .nav-links { gap: 16px; }
