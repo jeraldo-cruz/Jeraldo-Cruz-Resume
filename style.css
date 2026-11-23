@@ -327,6 +327,23 @@ body {
 .impact-list.compact { gap: 8px; }
 .impact-list.compact li { font-size: 0.94rem; line-height: 1.55; }
 
+.inline-venture-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 22px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--champagne-gold);
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.inline-venture-link:hover {
+    color: var(--text-primary);
+    transform: translateX(4px);
+}
+
 /* Nested Apple Career Progression Timeline */
 .apple-timeline {
     position: relative;
@@ -457,9 +474,17 @@ body {
     border-radius: 6px;
     padding: 18px 14px;
     text-align: center;
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     gap: 6px;
+    transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+
+.local-module:hover {
+    border-color: var(--champagne-gold);
+    background-color: #202026;
+    transform: translateY(-2px);
 }
 
 .module-tag {
@@ -476,14 +501,23 @@ body {
 }
 
 .local-url-bar {
+    display: block;
     text-align: center;
+    text-decoration: none;
     font-family: var(--font-mono);
     font-size: 0.78rem;
-    color: var(--text-secondary);
+    color: var(--champagne-gold);
     background-color: var(--bg-main);
-    border: 1px solid var(--border-subtle);
+    border: 1px solid rgba(184, 151, 94, 0.45);
     border-radius: 999px;
-    padding: 7px 14px;
+    padding: 8px 14px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.local-url-bar:hover {
+    background-color: rgba(184, 151, 94, 0.14);
+    border-color: var(--champagne-gold);
+    color: var(--text-primary);
 }
 
 /* 9. AMUSE HYBRID MAP + TELEMETRY */
